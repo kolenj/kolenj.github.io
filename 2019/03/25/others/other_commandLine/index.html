@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2020 | Hexo</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <title>Linux常用命令 | Hexo</title>
+  <meta name="description" content="查询IP 1、ipconfig（查看ip地址-Windows） - 2019&#x2F;04&#x2F;11  2、ifconfig （查看ip地址-Linux） - 2019&#x2F;04&#x2F;11    基本操作 1、shutdown -h  now&#x2F;1  （立即关机&#x2F;1分钟后关机    shutdown -r now  （立即重启  2、reboot   （重启  3、clear  （清屏   文件&#x2F;目录的操作 1、cd">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2019/03/25/others/other_commandLine/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="查询IP 1、ipconfig（查看ip地址-Windows） - 2019&#x2F;04&#x2F;11  2、ifconfig （查看ip地址-Linux） - 2019&#x2F;04&#x2F;11    基本操作 1、shutdown -h  now&#x2F;1  （立即关机&#x2F;1分钟后关机    shutdown -r now  （立即重启  2、reboot   （重启  3、clear  （清屏   文件&#x2F;目录的操作 1、cd">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-03-25T01:09:04.000Z">
+<meta property="article:modified_time" content="2020-03-30T08:26:21.196Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/archives/2020/index.html">
+  <link rel="canonical" href="http://yoursite.com/2019/03/25/others/other_commandLine/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -334,48 +339,263 @@
   
   
 <main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2020</h1>
-	      <p class="text-muted">共 1 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <div class="content">
+  <article id="post-others/other_commandLine" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
   
+    <h1 class="article-title" itemprop="name">
+      Linux常用命令
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2019/03/25/others/other_commandLine/" class="article-date">
+	  <time datetime="2019-03-25T01:09:04.000Z" itemprop="datePublished">2019-03-25</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/others/">others</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/Linux/" rel="tag">Linux</a>
+  </span>
+
+
+        
+
+	<span class="article-read hidden-xs">
+    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
+    	<span id="/2019/03/25/others/other_commandLine/" class="leancloud_visitors"  data-flag-title="Linux常用命令">
+			<span class="leancloud-visitors-count">0</span>
+		</span>
+    </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/03/25/others/other_commandLine/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <ul>
+<li><p><strong>查询IP</strong></p>
+<pre><code>1、ipconfig（查看ip地址-Windows） - 2019/04/11
+
+2、ifconfig （查看ip地址-Linux） - 2019/04/11</code></pre></li>
+</ul>
+<hr>
+<ul>
+<li><p><strong>基本操作</strong></p>
+<pre><code>1、shutdown -h  now/1  （立即关机/1分钟后关机
+   shutdown -r now  （立即重启
+
+2、reboot   （重启
+
+3、clear  （清屏</code></pre></li>
+</ul>
+<ul>
+<li><p><strong>文件/目录的操作</strong></p>
+<pre><code>1、cd 目录/~/../-   （转移到某目录/回到用户家目录，等同cd 回到上级目录/上次目录
+
+2、mkdir -p /usr/local/python3   （创建目录(多级递归创建) 、可一次创建多个，使用空格分开
+
+3、touch hello.py /or 直接 vi/vim 文件名   （创建文件
+
+4、chmod u/g/o/a +/-/= rwx 文件  （ chmod 777 test.py 其 r：4   w：2   x：1
+   [-R : 对目前目录下的所有档案与子目录进行相同的权限变更(即以递回的方式逐个变更)]
+
+5、ls -a/l/d   （-a 显示所有文件/-l    long 长格式显示/-d 查看目录属性
+   ls &gt; test.txt ( test.txt 如果不存在，则创建，存在则覆盖其内容 )
+
+6、pwd   （查看当前工作目录
+
+7、cp -rp [源文件] [目标文件]  （-r 复制目录/-p 保留文件属性（时间属性等）
+
+8、mv [旧文件名] [新文件名]   （重命名/转移-tips：同目录则是重命名/否则是转移
+
+9、rmdir [目标]  （只能删除空白目录
+
+10、rm [-rf ] 文件/目录   (-r: 删除目录-f: 强制执行
+
+11、cat是一次性显示整个文件的内容，适用于文件内容少的情况；
+    more和less一般用于显示文件内容超过一屏的内容，并且提供翻页的功能。
+    tail 和 head分别显示文件的后几行和前几行内容。常用于大文件的截取。
+    [参考：https://blog.csdn.net/lijing742180/article/details/83409704]</code></pre></li>
+<li><p><strong>其他常用命令</strong></p>
+<pre><code>1、ps -l   （查看程序进程
+   ps -ef | grep redis  （查看特定进程-redis
+   kill -9 xxx(进程pid)  （杀死特定进程
+
+2、grep &apos;hello&apos; test.txt  （文本搜索
+
+3、ssh root@xxx.xxx.xxx.xxx(ip地址) -p xxx(端口)   （ssh连接Linux服务器
+
+4、find ./ -name &apos;*.sh&apos;  （查找文件/文件夹
+
+5、sudo passwd root  （刚刚装好的系统切换到root用户
+
+6、systemctl enable/restart tinyproxy.service  （重启某个服务
+
+7、iptables -I INPUT -p tcp --dport 8888 -j ACCEPT  （防火墙开发某个端口
+
+8、systemctl stop firewalld.service  （关闭防火墙
+
+9、tar -czvf test.tar.gz a.c  （ 压缩 a.c文件为test.tar.gz
+   tar -xzvf test.tar.gz   （ 解压test.tar.gz文件
+
+   压缩用法：tar -jcvf 压缩包包名 文件...(tar jcvf bk.tar.bz2 *.c)
+   解压用法：tar -jxvf 压缩包包名 (tar jxvf bk.tar.bz2)
+
+10、ln 源文件 链接文件
+   ln -s 源文件 链接文件
+   [如果没有-s选项代表建立一个硬链接文件，两个文件占用相同大小的硬盘空                  
+   间，即使删除了源文件，链接文件还是存在，所以-s选项是更常见的形式。]</code></pre></li>
+</ul>
+<ul>
+<li><p><strong>vi常用命令</strong></p>
+<pre><code>1、H-(左) J-(下) K-(上) L-(右)
+
+2、ctrl+f/b，向前/后翻页
+
+3、命令行模式下查找：/xxx</code></pre></li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://yoursite.com/2019/03/25/others/other_commandLine/" title="Linux常用命令" target="_blank" rel="external">http://yoursite.com/2019/03/25/others/other_commandLine/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">愚人江</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
     
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
     
-      
-      
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2020" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2020
-            </a>
-            <!-- <a href="/archives/2020" class="archive-year">2020</a> -->
-          </h3>
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2019/07/18/crawlDatas/ADSL_Dial_Agent/" title="ADSL拨号代理总结"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2019/03/25/planguage/pl_pythonRudiment/" title="python 基础"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="collapse2020" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2020">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/2020/03/25/others/other_hotKeys/" class="collection-item" target="_blank" itemprop="url">
-  <time datetime="2020-03-25T01:09:04.000Z" itemprop="datePublished">2020-03-25</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 常用快捷键
-</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-  
-  
-    </div></div></div></section>
-  
 
-	    </div>
-  	</article>
-  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -436,6 +656,37 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: 'aG9opqV7WBuX3kiQ1c5mkmak-gzGzoHsz',
+    appKey: 'yyxrswlWqjL6rv3bL6Go9n3q',
+    placeholder: '予人玫瑰，手有余香...',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: true
+  });
+  </script>
+
+     
 
 
 
