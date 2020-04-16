@@ -106,4 +106,19 @@ https://blog.csdn.net/qq_41223155/article/details/89672742?depth_1-utm_source=di
     14、git branch -d dev                #删除分区dev
 
     15、git log --graph                  #查看分支合并图
+    16、git remote                       #查看远程库的信息,远程仓库的默认名称是origin
+    17、git remote -v                    #显示更详细的信息
+    18、git push origin dev              #推送分支dev(一般分支有master、dev、bug、feature)
+    19、git checkout -b branch-name origin/branch-name               #在本地创建和远程分支对应的分支(名称最好一致)
+    20、git branch --set-upstream branch-name origin/branch-name     #建立本地分支和远程分支的关联
+    21、git pull                         #从远程抓取分支，如果有冲突，要先处理冲突
     
+    标签：
+    1、git tag <tagname>                             #用于新建一个标签，默认为HEAD，也可以指定一个commit id
+    2、git tag -a <tagname> -m "blablabla..."        #指定标签信息blabla...
+    3、git tag                                       #查看所有标签
+    
+    4、git push origin <tagname>                     #推送一个本地标签
+    5、git push origin --tags                        #推送全部未推送过的本地标签
+    6、git tag -d <tagname>                          #删除一个本地标签
+    7、git push origin :refs/tags/<tagname>          #删除一个远程标签

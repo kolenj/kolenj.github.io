@@ -86,10 +86,9 @@ categories:
              8、复制本地xxx.github.io文件夹中的.git文件夹到hexo项目根目录(此时既关联hexo博客项目(环境文件)与GitHub仓库的hexo分支)
              9、回到hexo博客项目根目录，并将文件夹xxx.github.io删除
              10、执行以下命令即可把环境文件推送到hexo分支：
-                (git pull  #如果有多端维护更新了，则执行该命令进行协同更新)
                 git add . 
                 git commit -m "some description" 
-                git push origin hexo 
+                git push origin hexo (如果推送失败，则先用git pull抓取远程的新提交)
                 
              11、推送部署则执行：
                 hexo clean
@@ -107,6 +106,7 @@ categories:
     
 *参考*：
 
-https://zhuanlan.zhihu.com/p/26625249（搭建hexo）
-https://blog.plcent.com/2019/11/05/hexo-theme-pure/（使用pure主题）
-https://www.jianshu.com/p/fceaf373d797（多端更新维护）
+https://zhuanlan.zhihu.com/p/35668237
+https://zhuanlan.zhihu.com/p/26625249
+https://blog.plcent.com/2019/11/05/hexo-theme-pure/
+https://www.jianshu.com/p/fceaf373d797
