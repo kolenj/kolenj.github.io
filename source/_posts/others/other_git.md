@@ -14,8 +14,7 @@ categories:
     流行版本控制系统有：SVN、CVS、Git，其中SVN、CVS是集中式的版本控制，而Git是分布式
     
    
-**Git的安装****Git的安装**
-**Git的安装****Git的安装**
+**Git的安装**
 
     -Linux-
     Debian或Ubuntu系统：sudo apt-get install git
@@ -26,8 +25,20 @@ categories:
     Windows下安装：从Git官网下载安装程序，安装完成后从“开始菜单”里找到“Git”->“Git Bash”，能正常打开
     则表示已安装成功。
     进行全局配置：
-    $ git config --global user.name "Your Name"
-    $ git config --global user.email "email@example.com"
+    $ git config --global user.name "your name"
+    $ git config --global user.email "youremail@example.com"
+    
+    
+**通过ssh加密方式进行本地Git仓库与GitHub仓库之间传输**
+
+    1、打开Git Bash
+    2、$ ssh-keygen -t rsa -C "youremail@example.com"    (创建SSH Key，默认一路回车
+    3、执行步骤1命令将在用户主目录里生成.ssh目录，里面有id_rsa(私玥)和id_rsa.pub(公玥)两个文件
+    4、登陆GitHub账号，打开“Account settings”，“SSH Keys”页面，
+       点“Add SSH Key”，Title任意取，在Key文本框里粘贴id_rsa.pub文件的全部内容
+    5、$ ssh -T git@github.com      （测试是否连接成功，PS:成功提示会有successfuly authenticated字段
+
+
     
 **Git的版本创建**(windows)
     
@@ -50,19 +61,7 @@ categories:
         git commit -m "wrote a readme file"
         (Tips：其中 -m 'xxx...' 是提交说明注解）
     
-        
-
-**通过ssh加密方式进行本地Git仓库与GitHub仓库之间传输**
-
-    1、打开Git Bash
-    2、$ ssh-keygen -t rsa -C "youremail@example.com"    (创建SSH Key，默认一路回车
-    3、执行步骤1命令将在用户主目录里生成.ssh目录，里面有id_rsa(私玥)和id_rsa.pub(公玥)两个文件
-    4、登陆GitHub账号，打开“Account settings”，“SSH Keys”页面，
-       点“Add SSH Key”，Title任意取，在Key文本框里粘贴id_rsa.pub文件的全部内容
-    5、$ ssh -T git@github.com      （测试是否连接成功，PS:成功提示会有successfuly authenticated字段
-
-
-
+ 
 **远程库(github)操作**
 
     1、登录GitHub，创建一个新的仓库，如testblog
