@@ -54,14 +54,23 @@ categories:
 
 **通过ssh加密方式进行本地Git仓库与GitHub仓库之间传输**
 
-    0、打开Git Bash
-    1、$ ssh-keygen -t rsa -C "youremail@example.com"    (创建SSH Key，默认一路回车
-    2、执行步骤1命令将在用户主目录里生成.ssh目录，里面有id_rsa(私玥)和id_rsa.pub(公玥)两个文件
-    3、登陆GitHub账号，打开“Account settings”，“SSH Keys”页面，
+    1、打开Git Bash
+    2、$ ssh-keygen -t rsa -C "youremail@example.com"    (创建SSH Key，默认一路回车
+    3、执行步骤1命令将在用户主目录里生成.ssh目录，里面有id_rsa(私玥)和id_rsa.pub(公玥)两个文件
+    4、登陆GitHub账号，打开“Account settings”，“SSH Keys”页面，
        点“Add SSH Key”，Title任意取，在Key文本框里粘贴id_rsa.pub文件的全部内容
-    4、$ ssh -T git@github.com      （测试是否连接成功，PS:成功提示会有successfuly authenticated字段
-    
-    
+    5、$ ssh -T git@github.com      （测试是否连接成功，PS:成功提示会有successfuly authenticated字段
+
+
+
+**远程库(github)操作**
+
+    1、登录GitHub，创建一个新的仓库，如testblog
+    2、$ git remote add origin git@github.com:path/testblog.git    (可以从testblog克隆新仓库或将一个本地仓库与之关联
+       (克隆命令：git clone git@github.com:kolenj/testblog.git ,然后cd testblog)
+    3、$ git push -u origin master       (将本地库的所有内容推送到远程库上，第一次推送使用参数u表示将本地的master与远程master关联起来
+
+
     
 **Git的工作区和暂存区**
 
@@ -90,4 +99,12 @@ https://blog.csdn.net/qq_41223155/article/details/89672742?depth_1-utm_source=di
     8、git checkout -- file              #丢弃工作区的修改/误删恢复
     9、git reset HEAD <file>             #把暂存区的修改撤销掉（unstage），重新放回工作区
     10、git rm <file>                    #从版本库中删除文件,之后也要执行git commit 命令才起效
-    11、
+
+    11、git checkout -b dev              #创建并切换到dev分支(新：git switch -c dev)
+       (相当于创建: git branch dev, 切换：git checkout dev(新：git switch dev))
+    12、git branch                       #查看所有分支，带*表示当然default分支
+    13、git merge dev                    #合并指定分支(dev)到当前分支
+    14、git branch -d dev                #删除分区dev
+
+    15、git log --graph                  #查看分支合并图
+    
