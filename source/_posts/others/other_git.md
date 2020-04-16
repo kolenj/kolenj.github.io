@@ -14,7 +14,8 @@ categories:
     流行版本控制系统有：SVN、CVS、Git，其中SVN、CVS是集中式的版本控制，而Git是分布式
     
    
-**Git的安装**
+**Git的安装****Git的安装**
+**Git的安装****Git的安装**
 
     -Linux-
     Debian或Ubuntu系统：sudo apt-get install git
