@@ -65,7 +65,7 @@ categories:
 **远程库(github)操作**
 
     1、登录GitHub，创建一个新的仓库，如testblog
-    2、$ git remote add origin git@github.com:path/testblog.git    (可以从testblog克隆新仓库或将一个本地仓库与之关联
+    2、$ git remote add origin git@github.com:yourname/testblog.git    (可以从testblog克隆新仓库或将一个本地仓库与之关联
        (克隆命令：git clone git@github.com:kolenj/testblog.git ,然后cd testblog)
     3、$ git push -u origin master       (将本地库的所有内容推送到远程库上，第一次推送使用参数u表示将本地的master与远程master关联起来
 
@@ -122,3 +122,51 @@ https://blog.csdn.net/qq_41223155/article/details/89672742?depth_1-utm_source=di
     5、git push origin --tags                        #推送全部未推送过的本地标签
     6、git tag -d <tagname>                          #删除一个本地标签
     7、git push origin :refs/tags/<tagname>          #删除一个远程标签
+    
+    
+**使用Gitee**
+
+    1、注册账号并登录Gitee
+    2、上传自己的SSH公钥 (用户主目录下的.ssh/id_rsa.pub文件的内容,没有则执行：
+    
+        $ git config --global user.name "your name"
+        $ git config --global user.email "youremail@example.com"
+        $ ssh-keygen -t rsa -C "youremail@example.com"    #创建SSH Key
+        (PS: 如果登录邮箱不一致该公玥是否有效？)
+    3、在Gitee中创建项目，名称保持和本地项目一致
+    4、git remote add origin git@gitee.com:kolenj/testgit.git（将本地的项目和Gitee的远程库关联）
+       (如果出现：fatal: remote origin already exists.说明本地库已经关联了一个名叫origin的远程库）
+    5、git remote -v             #查看远程库信息,如果该项目之前关联了GitHub的远程库，则可能提示：
+       （origin	git@github.com:kolenj/testgit.git (fetch)
+         origin	git@github.com:kolenj/testit.git (push)
+         
+    6、git remote rm origin      #删除之前关联的GitHub远程库
+    7、执行步骤4
+       
+
+**同时关联GitHub与Gitee**
+
+    1、git remote rm origin          #首先删除已关联的名为origin的远程库
+    2、git remote add github git@github.com:kolenj/testgit.git     #接着先关联GitHub的远程库
+       (此时远程库的名称叫github，不叫origin了）
+    3、git remote add gitee git@gitee.com:kolenj/testgit.git       #再关联Gitee的远程库
+       (此时远程库的名称叫gitee，不叫origin了）
+    4、git remote -v                 #查看关联库的信息
+    5、git push github master        #推送送GitHub
+    6、git push gitee master         #推送到Gitee
+    
+    
+    
+**Git其它有用命令**
+    
+    1、$ git config --global color.ui true       #让Git显示颜色
+    2、$ git add -f App.class                    #强制提交提交(该类文件已被在.gitignore配置中忽略)
+    3、git check-ignore -v db.json               #检查对应文件(这里是db.json)的gitignore配置信息
+    4、$ git config --global alias.st status     #配置别名：将status简写成st
+    
+
+Tips：Git常见命令
+
+https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf
+
+    
