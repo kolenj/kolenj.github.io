@@ -76,7 +76,7 @@ categories:
     git add 将文件从“工作区”添加到->“版本区”的stage，
     git commit 将“版本区”stage里的文件提交到HEAD的指向区，如主分区master
 
-![myImg](public/images/avatar.jpg)
+![myImg](http://q92hyc32h.bkt.clouddn.com/0.jpg)
 
 解决markdown显示不了图片：
 https://blog.csdn.net/weixin_30444105/article/details/98096284?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-4&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-4
