@@ -78,10 +78,6 @@ categories:
 
 ![myImg](http://q92hyc32h.bkt.clouddn.com/0.jpg)
 
-解决markdown显示不了图片：
-https://blog.csdn.net/weixin_30444105/article/details/98096284?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-4&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-4
-
-https://blog.csdn.net/qq_41223155/article/details/89672742?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2&utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2
 
 **Git的常用命令及说**
     
