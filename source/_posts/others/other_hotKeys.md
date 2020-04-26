@@ -24,6 +24,7 @@ categories:
     12、Win + X                  （打开快捷菜单G
     13、Win + ;                  （呼出Windows自带的 Emoji、颜文字和符号
     -、Ctrl+A/C/X/V              （全选/复制/剪贴/粘贴
+    14、Ctrl+Shift+W             （自我设置的打开截图工具快捷键
 
 
 ####  chrome常用快捷键
@@ -49,6 +50,7 @@ categories:
     16、F11                      （开启或关闭全屏模式
     17、Ctrl+Shift+B             （显示或隐藏书签栏
     18、Shift+Esc                （打开 Chrome 任务管理器
+    19、Ctrl+Shift+S             （打开chrome网页截图工具
     
     
 

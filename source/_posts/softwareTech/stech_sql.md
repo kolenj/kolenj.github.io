@@ -1,5 +1,5 @@
 ---
-title: SQL教程
+title: SQL常见操作
 date: 2018-05-15 19:13:32
 tags: 
 - sql
@@ -9,61 +9,40 @@ categories:
 
 ---
 
-**1、SQL简介：**
-
-    SQL(Structured Query Language)，结构化查询语言，用于访问和处理数据库的标准的计算机语言。
-
-**2、SQL语言定义了以下几种操作数据库的能力：**
-
-    DDL：Data Definition Language
-    DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。
+**SQL基本查询**
+ 
+    1、基本查询：select * from <表名>
     
-    DML：Data Manipulation Language
-    DML为用户提供添加、删除、更新数据的能力，这些是应用程序对数据库的日常操作。
+    2、条件查询：SELECT * FROM <表名> WHERE <条件表达式> 
+               (常用的条件表达式：and/or/not/，like 'xx%xx'(%表示任意字符))
+       
+    3、投影查询：SELECT 列1, 列2, 列3 FROM <表名> WHERE <条件表达式>    
+               (让结果集只包含指定列这种查询操作称为投影查询)
+               SELECT 列1 别名1, 列2 别名2, 列3 别名3 FROM ...
+               (给列起别名)
+       
+    4、排序查询：使用ORDER BY对结果集进行排序，默认是升序、倒序排序使用DESC,可以对多个列进行排序
+                如果有WHERE子句，那么ORDER BY子句要放到WHERE子句后面
+                例：
+                    SELECT id, name, gender, score
+                    FROM students
+                    WHERE class_id = 1
+                    ORDER BY score DESC,gender;
     
-    DQL：Data Query Language
-    DQL允许用户查询数据，这也是通常最频繁的数据库日常操作
+    5、分页查询：使用“LIMIT <pageSize> OFFSET <pageIndex>”实现，
+                要查询出第N页的记录集：(PS:SQL记录集的索引从0开始)
+                假设LIMIT设定为pageSize，则pageIndex计算公式为pageSize * (N - 1)
+                例：
+                    SELECT id, name, gender, score
+                    FROM students
+                    ORDER BY score DESC
+                    LIMIT 3 OFFSET 3;
+ 
+
+**SQL进阶查询**
+   
+    6、聚合查询：
     
-    Tips：
-    SQL语言关键字不区分大小写！！！但是，针对不同的数据库，对于表名和列名，有的数据库区分大小写，有的数据库不区分大小写。同一个数据库，
-    有的在Linux上区分大小写，有的在Windows上不区分大小写。
-
-**3、常见数据库类型：**
-     
-    常见关系型数据库有：
-        Oracle，SQLServer，DB2，MySQL，Access，Sqlite
+    7、多表查询：
     
-    常见非关系型数据库有：          
-        MongoDB，Redis，HBase，NoSql
-
-**4、数据库/表的常见操作(MySql为例)：**
-        
-        1.创建数据库：
-            create databases 数据库名称;
-            (创建一个以utf-8为默认编码的数据库：CREATE DATABASE IF NOT EXISTS aimin DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
-            
-        2.创建表：
-            create table 表名称
-            (
-            列名称1 数据类型,
-            列名称2 数据类型,
-            .......
-            );
-            
-        3.show databases/tables;                                    (查看数据库/表
-        4.use 数据库名xxx                                           （切换到xxx数据库
-        5.desc test                                                  (查看表结构
-        6.drop database if exists xxx;                               (删除数据库xxx
-        7.drop table xxx                                            （删除表xxx
-        
-        8.alter table xxx(表名) change 原列名  想改成的列名 列类型;     (更改表的列名
-        9.alter table tablename rename newtablename;
-          rename table tablename to newtablename;
-        10. alter table tablename modify 列名 想改的类型;              (更改列的类型
-        11.alter table tablename add 列名 类型;                       (增加列
-        12.alter table tablename drop 列名;                           (删除某列
-        
-        
-**5、MySql常见操作：**
-
-    1、
+    8、连接查询：    
