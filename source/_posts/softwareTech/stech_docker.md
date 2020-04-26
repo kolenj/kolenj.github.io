@@ -16,7 +16,7 @@ categories:
 
 ####二、docker安装
 
-Windows：(https://docs.docker.com/docker-for-windows/install/)
+**Windows安装：(https://docs.docker.com/docker-for-windows/install/)**
 
 1、系统硬件要求：
 
@@ -34,13 +34,71 @@ Windows：(https://docs.docker.com/docker-for-windows/install/)
 ![](http://q92hyc32h.bkt.clouddn.com/blog_picgo/20200426212658.png)
 
 3、下载并安装Docker Desktop Installer.exe
+
 ![](http://q92hyc32h.bkt.clouddn.com/blog_picgo/20200426212108.png) 
 
 4、运行docker：
+
 ![](http://q92hyc32h.bkt.clouddn.com/blog_picgo/20200426212250.png)
 
 
 
+**Linux安装(ubuntu): (https://docs.docker.com/engine/install/ubuntu/)**
+
+1、OS requirements
+
+![](http://q92hyc32h.bkt.clouddn.com/blog_picgo/20200426222602.png)
+
+2、Uninstall old versions
+``` 
+    $ sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+3、Install using the repository
+```
+    1.Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+    
+        $ sudo apt-get update
+        
+        $ sudo apt-get install \
+            apt-transport-https \
+            ca-certificates \
+            curl \
+            gnupg-agent \
+            software-properties-common
+    
+    2.Add Docker’s official GPG key:
+    
+        $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+        $ sudo apt-key fingerprint 0EBFCD88
+
+    3.to set up the stable repository
+
+        $ sudo add-apt-repository \
+           "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+           $(lsb_release -cs) \
+           stable"
+
+```
+
+4、INSTALL DOCKER ENGINE
+``` 
+    1.安装最新版本：Update the apt package index, and install the latest version of Docker Engine and containerd
+        $ sudo apt-get update
+        $ sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+      安装指定版本：
+        $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
+
+    2.开启docker服务
+        $ sudo systemctl start docker
+
+    3.运行hello world
+        $ sudo docker run hello-world
+```
+
+    
 
     
 ####3、docker常用命令
@@ -54,11 +112,7 @@ Windows：(https://docs.docker.com/docker-for-windows/install/)
 
 ####5、Dockerfile
 
-####6、docker
 
-####7、docker
-
-####8、docker
 
 
 

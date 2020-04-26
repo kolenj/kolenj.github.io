@@ -9,27 +9,59 @@ categories:
 
 ---
 
-+ **查询IP**
++ **基本命令**
           
-          1、ipconfig（查看ip地址-Windows） - 2019/04/11
-
-          2、ifconfig （查看ip地址-Linux） - 2019/04/11
-
+          1、ifconfig                    （查看ip地址-Linux
+             ipconfig                    （查看ip地址-Windows
+             
+             
+           2、shutdown -h  now/1          (立刻关机/一分钟后关机
+              reboot                     （重启系统
+              
+           3、clear                      （清屏-Linux
+              cls                        （清屏-widows
+             
+           
 ---
 
-+ **基本操作**
++ **用户/用户组常用操作命令**(查看、创建、更改、删除)
 
-      1、shutdown -h  now/1  （立即关机/1分钟后关机
-         shutdown -r now  （立即重启
-
-      2、reboot   （重启
-
-      3、clear  （清屏
+      1、sudo passwd                       (给新系统root用户设置密码
+      
+      2、su 用户名                         （切换到指定用户
+      
+      3、cat /etc/group | grep group01      (查看指定用户组group01-使用|grep
+         cat /etc/passwd |grep user01       （查看用户user01
+         
+      4、groupadd group01                   (创建用户组group01
+         groupdel group01                   (删除用户组group01
+         
+      5、adduser user01                     （创建用户user01  -ubuntu下useradd不起作用！！
+         passwd user01                      （给用户user01设置密码/更新密码
+         usermad -g group01 user01           (将用户user01添加到group01工作组
+         userdel user01                      (删除用户user01
+         
+         userdel -r user01                   (删除用户user01同时删除他的工作目录
+         (Tips：如果出现userdel: user user01 is currently used by process 640，
+         则执行：第一次使用ctrl+d退出root用户，回到user01用户；第二次使用ctrl+d退出user01用户，
+         此时会返回到root用户（再按ctrl+d退出登陆连接），此时使用userdel user01正常删除。)
+         
+      6、useradd -g group01 user01           (创建用户user01并将其添加到指定用户组group01
+         
+         
+      7、chmod命令是非常重要的，用于改变文件或目录的访问权限。用户用它控制文件或目录的访问权限
+      
+      8、chown更改某个文件或目录的属主和属组
+       
+      
 
 
 + **文件/目录的操作**
 
-      1、cd 目录/~/../-   （转移到某目录/回到用户家目录，等同cd 回到上级目录/上次目录
+      1、cd             (回到用户根目录
+         cd -           (回到上次目录
+         cd ..          (回到上级目录
+         
 
       2、mkdir -p /usr/local/python3   （创建目录(多级递归创建) 、可一次创建多个，使用空格分开
 
