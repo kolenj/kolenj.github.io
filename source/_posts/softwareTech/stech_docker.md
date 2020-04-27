@@ -1,5 +1,5 @@
 ---
-title: Docker
+title: Docker的安装
 date: 2018-05-15 19:13:32
 tags: 
 - docker
@@ -40,6 +40,12 @@ categories:
 4、运行docker：
 
 ![](http://q92hyc32h.bkt.clouddn.com/blog_picgo/20200426212250.png)
+
+5、使用docker国内镜像
+
+    右击点击docker图标，点击Settigs,进入设置页面按照如下图添加docker国内镜像
+    如我用的是阿里云的镜像：https://rsdddmei.mirror.aliyuncs.com
+![](http://q92hyc32h.bkt.clouddn.com/blog_picgo/20200427231456.png)
 
 
 
@@ -98,19 +104,10 @@ categories:
         $ sudo docker run hello-world
 ```
 
-    
 
-    
-####3、docker常用命令
+**其它版本安装请自己参考官方文档：https://docs.docker.com/**
 
-    docker search 镜像名           （搜索镜像
-    docker pull 镜像名:版本号        
-    docker exec -it 容器名 bash        (进入容器bash
-    
 
-####4、docker其它命令
-
-####5、Dockerfile
 
 
 
