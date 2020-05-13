@@ -53,7 +53,74 @@ categories:
     19、Ctrl+Shift+S             （打开chrome网页截图工具
     
     
+          
+          
+####  Tmux常用指令
 
+    1、Tmux安装：    
+        $ sudo apt-get install tmux                 （# Ubuntu 或 Debian
+        
+        $ sudo yum install tmux                      （# CentOS 或 Fedora
+
+        $ brew install tmux                          （# Mac
+        
+    2、会话操作：
+        $ tmux
+        
+        $ tmux new -s <session-name>                 （启动一个自定义名称的会话
+        
+        $ tmux detach（=Ctrl+b d                      （将当前会话与窗口分离
+        
+        $ tmux ls                                     （查看所有会话
+        
+        $ tmux attach -t 会话编号/会话名称               （接入会话
+        
+        $ tmux kill-session -t 会话编号/会话名称         （杀死会话
+        
+        $ tmux switch -t 会话编号/会话名称                （切换会话
+        
+        $ tmux rename-session -t 会话编号 会话名称(新名称)  （重命名会话
+    
+    3、窗格操作：
+        $ tmux split-window (-h)                （ 划分为上下两个窗格/-h划分为左右两个窗格
+        
+        $ tmux select-pane -U(D/L/R)            （移动光标到上/下/左/右
+        
+        $ tmux swap-pane -U/D                     （# 当前窗格上移/下移
+        
+        
+    
+    4、其它命令： 
+        $ tmux list-keys                        （# 列出所有快捷键，及其对应的 Tmux 命令
+
+        $ tmux list-commands                    （# 列出所有 Tmux 命令及其参数
+
+        $ tmux info                             （# 列出当前所有 Tmux 会话的信息
+  
+        $ tmux source-file ~/.tmux.conf          （# 重新加载当前的 Tmux 配置
+        
+    5、Tmux常用快捷键：
+        Ctrl+b                    (前缀键   
+        Ctrl+d                    (退出当前会话=exit
+        
+        Ctrl+b d                  (分离当前会话
+        Ctrl+b s                  (列出所有会话
+        Ctrl+b $                  (重命名当前会话
+        
+        Ctrl+b %                  (划分左右两个窗格。
+        Ctrl+b "                  (划分上下两个窗格。
+        Ctrl+b <arrow key>        (光标切换到其他窗格。<arrow key>是指向要切换到的窗格的方向键，比如切换到下方窗格，就按方向键↓。
+        Ctrl+b ;                  (光标切换到上一个窗格。
+        Ctrl+b o                  (光标切换到下一个窗格。
+        Ctrl+b {                  (当前窗格左移。
+        Ctrl+b }                  (当前窗格右移。
+        Ctrl+b Ctrl+o             (当前窗格上移。
+        Ctrl+b Alt+o              (当前窗格下移。
+        Ctrl+b x                  (关闭当前窗格。
+        Ctrl+b !                  (将当前窗格拆分为一个独立窗口。
+        Ctrl+b z                  (当前窗格全屏显示，再使用一次会变回原来大小。
+        Ctrl+b Ctrl+<arrow key>   (按箭头方向调整窗格大小。
+        Ctrl+b q                  (显示窗格编号。
 
    
           

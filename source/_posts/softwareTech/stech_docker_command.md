@@ -13,7 +13,7 @@ categories:
 
     常用参数说明：
         -a/-filter/-f                                   （所有/过滤条件/强制执行---常用参数说明
-    
+        
     搜索镜像：
         docker search 镜像名                             （搜索镜像
         docker search --filter=is-offical=true ngix
@@ -107,5 +107,24 @@ categories:
        docker container diff 容器名/id                           （查看容器内文件系统的变更
        docker container port 容器名/id                           （查看容器的端口映射
 
+
+####四、docker数据管理
+
+    1、容器中的管理数据主要有两种方式：
+    
+            数据卷(Data Volumes)：容器内数据直接映射到本地主机环境
+            数据卷容器(Data Volume Containers)：使用特定容器维护数据卷
+
+
 ####四、Dockerfile
+
+    Dockerfile：
+        Dockerfile是一个文本格式的配置文件，用户可以使用Dockerfile来快速创建自定义的镜像
+    它是由一行行命令语句组成，并且支持以＃开头的注释行。
+    
+    主要格式形式可以分为四部分： 基础镜像信息、维护者信息、镜像操作指令和容器启动时执行指令。
+    
+    
+    
+    
    
