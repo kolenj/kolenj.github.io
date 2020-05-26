@@ -1,15 +1,15 @@
 ---
-title: appium的使用
-date: 2018-03-25 09:09:04
+title: selenium + python 自动化测试
+date: 2017-03-25 09:09:04
 tags: 
-- appium
+- selenium
 
 categories:
 - 软件测试
 
 ---
 
-##### 一、创建wifi无线调试环境
+##### 一、python+selenium环境的搭建
 
       
       前提条件：手机(移动端设备)和PC处于同一局域网 
