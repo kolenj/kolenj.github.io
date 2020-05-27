@@ -5,7 +5,7 @@ tags:
 - 
 
 categories:
-- others
+- 个人
 
 password: myblog
 abstract: Welcome to my blog, this is need enter password!.
@@ -44,8 +44,8 @@ message: 请输入密码继续阅读...
 	
 **二、辅助工具**
 
-	
-	snapshot(截屏/录屏)
+	OBS Studio(截屏/录屏)
+	snapshot
 	Apowersoft
 	bandicam/camtasia
 

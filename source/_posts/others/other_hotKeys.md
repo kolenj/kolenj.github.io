@@ -53,7 +53,13 @@ categories:
     19、Ctrl+Shift+S             （打开chrome网页截图工具
     
     
-          
+####  SharX截图工具常用快捷键
+
+    1、Ctrl + PrtSc          （窗口截图
+    2、PrtSc                 （全屏截图
+    3、A                     （箭头指向
+    4、L                     （画直线
+    5、
           
 ####  Tmux常用指令
 
