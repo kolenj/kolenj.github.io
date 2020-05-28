@@ -24,6 +24,12 @@ message: 请输入密码继续阅读...
             "title": "学习了使用json-server/mockoon to fake/mock rest api for testing",
             "id":10002
         },
+        
+        {   
+            "date":  "2020-05-28",
+            "title": "重温了Fiddler的用法",
+            "id":10003
+        },
 
     {
 
@@ -51,7 +57,19 @@ message: 请输入密码继续阅读...
             "importance":7,
             "categories":"软件测试",
             "remarks":"还需多加练习操作..."
-            "id":10001
+            "id":10002
+        },
+        
+        
+        {
+            "date":  "2020-05-28",
+            "title": "重温了Fiddler的用法",
+            "refer": {"refer1": "自己博客"},
+            "grasp": "掌握",
+            "importance":6,
+            "categories":"软件测试",
+            "remarks":"还需多加练习操作..."
+            "id":10003
         },
     
     }

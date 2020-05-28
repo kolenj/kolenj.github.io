@@ -1,42 +1,143 @@
 ---
-title: postman工具使用指南
+title: postman使用指南及实战
 date: 2017-03-15 09:09:04
 tags: 
 - 软件工具
  
 categories:
-- 软件测试
+- softwareTest
 
 ---
 
-####  Postman安装与界面：
-    1、安装：chrome插件版已被舍弃，使用app版
-    2、界面的介绍、登录云端保存共享、创建测试用例集合，
-    3、请求4要素：请求url，请求方法，请求头域headers，请求参数params（post请求时有请求body）
-       响应4要素：响应码 、响应头域、响应body
-       
-    4、post方法请求时，请求体body里携带的参数格式有：form-data(文件上传 )/x-www-form-urlencoded/binary/
-       raw(text/plain、application/json、application/javascript、application(text)/xml、text/html)   
-       相对应于请求头Request Headers中Content-Type：
-       
-    5、请求有时需要Refer、Content-type、Cookies、token等参数才能成功访问
+
+####  一、Postman的安装及基本使用
+1.官网下载安装 [Postman](https://www.postman.com/downloads/)
+
+![](https://gitee.com/kolenj/BlogImages/raw/master/20200528134158.png)
+
+（PS：Postman 的 Chrome浏览器插件版已不再维护，不推荐使用了）
+
+2.安装好之后可以注册个账户进行登录
+
+![](https://gitee.com/kolenj/BlogImages/raw/master/20200528134645.png)
+
+3.界面操作的说明
+
+![](https://gitee.com/kolenj/BlogImages/raw/master/20200529012446.png)
+
+
+####  二、接口测试
+
+**接口测试说明**
+
+![](https://gitee.com/kolenj/BlogImages/raw/master/20200528183501.png)
+
+**接口测试的流程**
+
+1.获取接口信息
+一般是通过接口文档获取接口的基本调用方式和返回的数据说明，如果没接口文档，可通过抓包方式获取。[抓包教程](http://localhost:4000/2017/05/15/stest/stest_fiddler%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/)
+
+2.设计接口测试用例
+根据接口信息，按照接口测试用例的设计方法，进行设计参数和预期返回结果。
+
+3.发起接口请求
+使用工具或编程方式发起接口请求。
+
+4.验证返回信息
+获取接口返回的结果，进行解析和验证。
+
+![](https://gitee.com/kolenj/BlogImages/raw/master/20200528181633.png)
+
+**Postman接口请求过程**
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528175913.png)
+
+**通过chrome浏览器打开开发者工具(快捷键F12)查看请求和响应的一个实例**
+* 请求
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528181724.png)
+
+* 响应 
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528181444.png)
+
+
+####  三、请求头域的一些相关说明
+
+* 请求有时需要携带Refer、Content-type、Cookies、token等参数才能成功访问
+
+* Post方法请求时请求体Body的参数携带方式与请求头域Content-Type的类型相对应：
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528190524.png)
+
+(PS：请求体body里携带的参数格式有：
+form-data(键-值/文件)/ x-www-form-urlencoded(键值对)/ binary(文件)/
+raw(text/plain、application/json、application/javascript、application(text)/xml、text/html) )
+
+
+####  四、环境变量与全局变量
+
+* 创建环境变量/全局变量
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528211818.png)
+
+* 通过"{{变量名}}"方式进行变量的引用(使用)
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528212421.png)
+
+
+####  五、测试沙箱和测试断言
+* 作用:
+
+    请求前脚本设置请求前置操作如设置变量等；
     
-    6、环境变量与请求参数的参数化，既使用{{xxx}}获取对应环境中的xxx参数的值
+    请求后对状态码、响应头、响应正文等信息进行断言操作；
     
-    7、测试沙箱：
-        postman测试沙箱是结合js脚本完成测试中的功能，在请求发起前后实现部分测试操作。
-        常用功能：
-        请求前脚本设置请求前置操作如设置变量等。
-        请求后对状态码、响应头、响应正文等信息进行断言操作。
-        使用console控制台进行调试。
-        通过console查看接口请求返回信息，一级对脚本中使用的变量进行输出调试等操作。
-        (Pre-request Script-设置请求前脚本，Tests-断言判断 )
-        
-    8、数据集与数据驱动：
-        点击运行数据集执行Run
-        文件数据格式支持json/cvs
-        在Pre-request Script、Tests引用数据格式为data.xxx
-        
-    9、Newman命令与Jenkins持续集成
+    使用console控制台进行调试；
     
-    10、monitor的使用[https://www.cnblogs.com/zouzou-busy/p/11134683.html]
+    通过console查看接口请求返回信息，以及对脚本中使用的变量进行输出调试等操作。
+    
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529010451.png)
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529010827.png)
+
+
+####  六、多接口测试管理-测试集与测试驱动
+
+* 运行步骤：
+
+    1.点击运行要测试的数据集(执行Runner)
+    
+    2.设置要使用的环境，循环次数，延迟设定，导入数据集(数据格式支持json/cvs,另外要注意编码问题，建议使用"utf-8"格式)
+    
+    (PS:在测试沙箱的Pre-request Script、Tests中引用数据格式为：data.xxx，请求头中为：{{xxx}})
+    
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529022314.png)
+    
+* 执行结果：
+
+    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529022705.png)
+    
+####  七、cookies的获取方式及后续操作
+
+1.先网页登录后使用浏览器的开发者工具在Network选项栏查找到cookie值，后续使用Postman的请求中在Headers项通过“Cookie"携带上该cookie
+
+![](https://gitee.com/kolenj/BlogImages/raw/master/20200529025810.png)
+
+2.先网页登录后使用浏览器的开发者工具在Application选项栏点击"Cookies"选项，其中会含有用户成功登录后维持该请求会话的信息数据，
+  一般会是含有“sess”字段的 键值对，找到之后在postman的cookies面板添加该请求域名(网址)，然后添加cookie，将模板的cookie键值对
+  替换即可
+  
+ ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529030311.png)
+  
+3.直接在Postman中通过账户密码进行成功登录，Postman的Cookies管理器自动将请求后的cookies保存下来，后续的请求(同一个网站)则会
+  自动引用这些cookies
+    
+
+#### 八、Newman命令与Jenkins持续集成
+
+* Newman命令与Jenkins持续集成
+
+#### 九、monitor的使用
+
+* monitor的使用[https://www.cnblogs.com/zouzou-busy/p/11134683.html]

@@ -15,7 +15,7 @@ message: 请输入密码继续阅读...
 **一、好用的辅助工具**
 
    [参考网站1，](https://zhuanlan.zhihu.com/p/113302370) 
-   [参考网站2，](https://zhuanlan.zhihu.com/p/113302370)
+   [参考网站2，](https://zhuanlan.zhihu.com/p/40553497)
    [参考网站3，](https://zhuanlan.zhihu.com/p/113302370)
    [参考网站4](https://zhuanlan.zhihu.com/p/113302370)
    
