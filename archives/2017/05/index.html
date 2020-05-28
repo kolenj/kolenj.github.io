@@ -17,21 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>数据库常见操作 | Hexo</title>
-  <meta name="description" content="1、SQL简介： SQL(Structured Query Language)，结构化查询语言，用于访问和处理数据库的标准的计算机语言。2、SQL语言定义了以下几种操作数据库的能力： DDL：Data Definition Language DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。  DML：Data Manipulation Langua">
-<meta property="og:type" content="article">
-<meta property="og:title" content="数据库常见操作">
-<meta property="og:url" content="http://yoursite.com/2018/05/15/softwareTech/stech_database/index.html">
+  <title>归档: 2017/5 | Hexo</title>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2017/05/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1、SQL简介： SQL(Structured Query Language)，结构化查询语言，用于访问和处理数据库的标准的计算机语言。2、SQL语言定义了以下几种操作数据库的能力： DDL：Data Definition Language DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。  DML：Data Manipulation Langua">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-05-15T11:13:32.000Z">
-<meta property="article:modified_time" content="2020-05-19T09:43:18.659Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2018/05/15/softwareTech/stech_database/index.html">
+  <link rel="canonical" href="http://yoursite.com/archives/2017/05/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -339,241 +334,48 @@
   
   
 <main class="main" role="main">
-  <div class="content">
-  <article id="post-softwareTech/stech_database" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  	<article class="content article article-archives article-type-list" itemscope="">
+	    <header class="article-header">
+	      <h1 itemprop="title">归档: 2017/5</h1>
+	      <p class="text-muted">共 1 篇文章</p>
+	    </header>
+	    <div class="article-body">
+	      
+  
+  
     
-    <div class="article-header">
+    
       
-        
-  
-    <h1 class="article-title" itemprop="name">
-      数据库常见操作
-    </h1>
-  
-
       
-      <div class="article-meta">
-        <span class="article-date">
-    <i class="icon icon-calendar-check"></i>
-	<a href="/2018/05/15/softwareTech/stech_database/" class="article-date">
-	  <time datetime="2018-05-15T11:13:32.000Z" itemprop="datePublished">2018-05-15</time>
-	</a>
-</span>
-        
-  <span class="article-category">
-    <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a>
-  </span>
-
-        
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/sql/" rel="tag">sql</a>
-  </span>
-
-
-        
-
-	<span class="article-read hidden-xs">
-    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/2018/05/15/softwareTech/stech_database/" class="leancloud_visitors"  data-flag-title="数据库常见操作">
-			<span class="leancloud-visitors-count">0</span>
-		</span>
-    </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/05/15/softwareTech/stech_database/#comments" class="article-comment-link">评论</a></span>
-        
-      </div>
-    </div>
-    <div class="article-entry marked-body" itemprop="articleBody">
-      
-        <p><strong>1、SQL简介：</strong></p>
-<pre><code>SQL(Structured Query Language)，结构化查询语言，用于访问和处理数据库的标准的计算机语言。</code></pre><p><strong>2、SQL语言定义了以下几种操作数据库的能力：</strong></p>
-<pre><code>DDL：Data Definition Language
-DDL允许用户定义数据，也就是创建表、删除表、修改表结构这些操作。通常，DDL由数据库管理员执行。
-
-DML：Data Manipulation Language
-DML为用户提供添加、删除、更新数据的能力，这些是应用程序对数据库的日常操作。
-
-DQL：Data Query Language
-DQL允许用户查询数据，这也是通常最频繁的数据库日常操作
-
-Tips：
-SQL语言关键字不区分大小写！！！但是，针对不同的数据库，对于表名和列名，有的数据库区分大小写，有的数据库不区分大小写。同一个数据库，
-有的在Linux上区分大小写，有的在Windows上不区分大小写。</code></pre><p><strong>3、常见数据库类型：</strong></p>
-<pre><code>常见关系型数据库有：
-    Oracle，SQLServer，DB2，MySQL，Access，Sqlite
-
-常见非关系型数据库有：          
-    MongoDB，Redis，HBase，NoSql</code></pre><p><strong>4、数据库/表的常见操作(MySql为例)：</strong></p>
-<pre><code>1.创建数据库：
-    create databases 数据库名称;
-    (创建一个以utf-8为默认编码的数据库：CREATE DATABASE IF NOT EXISTS aimin DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
-
-2.创建表：
-    create table 表名称
-    (
-    列名称1 数据类型,
-    列名称2 数据类型,
-    .......
-    );
-
-3.show databases/tables;                                    (查看数据库/表
-4.use 数据库名xxx                                           （切换到xxx数据库
-5.show columns from xxx/desc xxx                            (查看表结构,xxx为表名
-6.drop database if exists xxx;                               (删除数据库xxx
-7.drop table xxx（表名）                                           （删除表xxx
-  delete from xxx（表名）                                    （清空表
-8.alter table xxx(表名) change 原列名  想改成的列名 列类型;     (更改表的列名
-9.alter table tablename rename newtablename;                （对表名进行重命名
-  rename table tablename to newtablename;
-10. alter table tablename modify 列名 想改的类型;              (更改列的类型
-11.alter table tablename add 列名 类型;                       (增加列
-12.alter table tablename drop 列名;                           (删除某列</code></pre><p><strong>5、MySql常见操作：</strong></p>
-<pre><code>1、登录到MySQL：
-    mysql - h 主机地址 -u 用户名 -p 用户密码;         （本地可省略 -h 主机地址
-
-2、更改登录密码：
-    update user set password=PASSWORD(&apos;新密码&apos;) where user=‘用户名&apos;;
-    flush privileges;(刷新权限设置)
-
-3、增加新用户：
-    grant select(insert,update,delete)/=(all privileges) on 数据库.* to 用户名@登录主机 identified by &apos;密码&apos;; 
-    flush privileges;(刷新权限设置) 
-
-4、让root用户免密码操作数据库：
-    grant select,insert,update,delete on 数据库.* to root@localhost identified by &apos;&apos;;
-    flush privileges;(刷新权限设置)
-
-5、删除用户：
-    delete from user where user=&apos;用户名&apos; and host=&apos;localhost&apos;;
-    flush privileges;(刷新权限设置)</code></pre>
-      
-    </div>
-    <div class="article-footer">
-      <blockquote class="mt-2x">
-  <ul class="post-copyright list-unstyled">
-    
-    <li class="post-copyright-link hidden-xs">
-      <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2018/05/15/softwareTech/stech_database/" title="数据库常见操作" target="_blank" rel="external">http://yoursite.com/2018/05/15/softwareTech/stech_database/</a>
-    </li>
-    
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-</blockquote>
-
-
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">愚人江</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
-        <div>个人简介。</div>
-      </div>
-    </figure>
-  </div>
-</div>
-
-
-    </div>
-  </article>
-  
-    
-  <section id="comments">
-  	
-      <div id="vcomments"></div>
-    
-  </section>
-
-
-  
-</div>
-
-  <nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-  
-  <ul class="pager pull-left">
-    
-    <li class="prev">
-      <a href="/2018/06/23/others/other_git_server/" title="搭建Git服务器"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
-    
-    <li class="next">
-      <a href="/2018/05/15/softwareTech/stech_docker/" title="Docker的安装"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
-    
-    
-  </ul>
-  
-  
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
-  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
-    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
-  </div> -->
-  
-  
-  <div class="bar-right">
-    
-    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
-    
-  </div>
-  </div>
-</nav>
-  
-<!-- Modal -->
-<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content donate">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-body">
-        <div class="donate-box">
-          <div class="donate-head">
-            <p>感谢您的支持，我会继续努力的!</p>
-          </div>
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
-              <div class="donate-payimg">
-                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
-              </div>
-              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
-              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
-              <div class="donate-payimg">
-                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
-              </div>
-              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
-              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
-            </div>
-          </div>
-          <div class="donate-footer">
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-              <li role="presentation" class="active">
-                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
-              </li>
-              <li role="presentation" class="">
-                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
-              </li>
-            </ul>
-          </div>
+      <section class="panel panel-default b-no">
+        <div class="panel-heading" role="tab">
+          <h3 class="panel-title">
+            <a data-toggle="collapse" href="#collapse2017" aria-expanded="true">
+              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
+              2017
+            </a>
+            <!-- <a href="/archives/2017" class="archive-year">2017</a> -->
+          </h3>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+        <div id="collapse2017" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2017">
+        <div class="panel-body">
+          <div class="collection">
+    
+    
+<a href="/2017/05/15/stest/stest_fiddler%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" class="collection-item" target="_blank" itemprop="url">
+  <time datetime="2017-05-15T11:13:32.000Z" itemprop="datePublished">2017-05-15</time>
+  <span>&nbsp;&nbsp;&nbsp;</span> Fiddler的使用教程
+</a>
 
 
+  
+  
+    </div></div></div></section>
+  
 
+	    </div>
+  	</article>
+  	 	
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -634,37 +436,6 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
-
-   
-
-
-
-
-   
-    
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
-  <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: 'aG9opqV7WBuX3kiQ1c5mkmak-gzGzoHsz',
-    appKey: 'yyxrswlWqjL6rv3bL6Go9n3q',
-    placeholder: '予人玫瑰，手有余香...',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: true
-  });
-  </script>
-
-     
 
 
 

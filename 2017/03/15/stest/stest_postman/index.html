@@ -17,19 +17,36 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>postman工具使用指南 | Hexo</title>
-  <meta name="description" content="Postman安装与界面：1、安装：chrome插件版已被舍弃，使用app版 2、界面的介绍、登录云端保存共享、创建测试用例集合， 3、请求4要素：请求url，请求方法，请求头域headers，请求参数params（post请求时有请求body）    响应4要素：响应码 、响应头域、响应body  4、post方法请求时，请求体body里携带的参数格式有：form-data(文件上传 )&#x2F;x-w">
+  <title>postman使用指南及实战 | Hexo</title>
+  <meta name="description" content="一、Postman的安装及基本使用1.官网下载安装 Postman  （PS：Postman 的 Chrome浏览器插件版已不再维护，不推荐使用了） 2.安装好之后可以注册个账户进行登录  3.界面操作的说明  二、接口测试接口测试说明  接口测试的流程 1.获取接口信息一般是通过接口文档获取接口的基本调用方式和返回的数据说明，如果没接口文档，可通过抓包方式获取。抓包教程 2.设计接口测试用例根据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="postman工具使用指南">
+<meta property="og:title" content="postman使用指南及实战">
 <meta property="og:url" content="http://yoursite.com/2017/03/15/stest/stest_postman/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Postman安装与界面：1、安装：chrome插件版已被舍弃，使用app版 2、界面的介绍、登录云端保存共享、创建测试用例集合， 3、请求4要素：请求url，请求方法，请求头域headers，请求参数params（post请求时有请求body）    响应4要素：响应码 、响应头域、响应body  4、post方法请求时，请求体body里携带的参数格式有：form-data(文件上传 )&#x2F;x-w">
+<meta property="og:description" content="一、Postman的安装及基本使用1.官网下载安装 Postman  （PS：Postman 的 Chrome浏览器插件版已不再维护，不推荐使用了） 2.安装好之后可以注册个账户进行登录  3.界面操作的说明  二、接口测试接口测试说明  接口测试的流程 1.获取接口信息一般是通过接口文档获取接口的基本调用方式和返回的数据说明，如果没接口文档，可通过抓包方式获取。抓包教程 2.设计接口测试用例根据">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528134158.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528134645.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529012446.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528183501.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528181633.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528181724.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528181444.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528190524.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528211818.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528212421.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529010451.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529010827.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529022314.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529022705.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529025810.png">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200529030311.png">
 <meta property="article:published_time" content="2017-03-15T01:09:04.000Z">
-<meta property="article:modified_time" content="2020-05-19T09:43:18.660Z">
+<meta property="article:modified_time" content="2020-05-28T19:14:37.210Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="软件工具">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200528134158.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://yoursite.com/2017/03/15/stest/stest_postman/index.html">
   
@@ -211,7 +228,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a><span class="category-list-count">8</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/softwareTest/">softwareTest</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a><span class="category-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +238,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fake-Rest-Api/" rel="tag">Fake Rest Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mock-Api/" rel="tag">Mock Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mockoon/" rel="tag">Mockoon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/" rel="tag">appium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json-server/" rel="tag">json-server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/" rel="tag">support</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" rel="tag">理论概念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" rel="tag">软件工具</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fake-Rest-Api/" rel="tag">Fake Rest Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mock-Api/" rel="tag">Mock Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mockoon/" rel="tag">Mockoon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/" rel="tag">appium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fildder/" rel="tag">fildder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json-server/" rel="tag">json-server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/" rel="tag">support</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" rel="tag">理论概念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" rel="tag">软件工具</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -231,7 +248,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Fake-Rest-Api/" style="font-size: 13px;">Fake Rest Api</a> <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/Mock-Api/" style="font-size: 13px;">Mock Api</a> <a href="/tags/Mockoon/" style="font-size: 13px;">Mockoon</a> <a href="/tags/appium/" style="font-size: 13px;">appium</a> <a href="/tags/docker/" style="font-size: 14px;">docker</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/json-server/" style="font-size: 13px;">json-server</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/selenium/" style="font-size: 13px;">selenium</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/support/" style="font-size: 13px;">support</a> <a href="/tags/trojan/" style="font-size: 13px;">trojan</a> <a href="/tags/vpn/" style="font-size: 13px;">vpn</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px;">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 13px;">快捷键</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" style="font-size: 14px;">理论概念</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" style="font-size: 14px;">软件工具</a>
+      <a href="/tags/Fake-Rest-Api/" style="font-size: 13px;">Fake Rest Api</a> <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/Mock-Api/" style="font-size: 13px;">Mock Api</a> <a href="/tags/Mockoon/" style="font-size: 13px;">Mockoon</a> <a href="/tags/appium/" style="font-size: 13px;">appium</a> <a href="/tags/docker/" style="font-size: 14px;">docker</a> <a href="/tags/fildder/" style="font-size: 13px;">fildder</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/json-server/" style="font-size: 13px;">json-server</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/selenium/" style="font-size: 13px;">selenium</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/support/" style="font-size: 13px;">support</a> <a href="/tags/trojan/" style="font-size: 13px;">trojan</a> <a href="/tags/vpn/" style="font-size: 13px;">vpn</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px;">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 13px;">快捷键</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" style="font-size: 14px;">理论概念</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" style="font-size: 14px;">软件工具</a>
     </div>
   </div>
 
@@ -240,7 +257,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -347,7 +364,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      postman工具使用指南
+      postman使用指南及实战
     </h1>
   
 
@@ -362,7 +379,7 @@
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a>
+    <a class="article-category-link" href="/categories/softwareTest/">softwareTest</a>
   </span>
 
         
@@ -376,7 +393,7 @@
 
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/2017/03/15/stest/stest_postman/" class="leancloud_visitors"  data-flag-title="postman工具使用指南">
+    	<span id="/2017/03/15/stest/stest_postman/" class="leancloud_visitors"  data-flag-title="postman使用指南及实战">
 			<span class="leancloud-visitors-count">0</span>
 		</span>
     </span>
@@ -387,36 +404,80 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h4 id="Postman安装与界面："><a href="#Postman安装与界面：" class="headerlink" title="Postman安装与界面："></a>Postman安装与界面：</h4><pre><code>1、安装：chrome插件版已被舍弃，使用app版
-2、界面的介绍、登录云端保存共享、创建测试用例集合，
-3、请求4要素：请求url，请求方法，请求头域headers，请求参数params（post请求时有请求body）
-   响应4要素：响应码 、响应头域、响应body
+        <h4 id="一、Postman的安装及基本使用"><a href="#一、Postman的安装及基本使用" class="headerlink" title="一、Postman的安装及基本使用"></a>一、Postman的安装及基本使用</h4><p>1.官网下载安装 <a href="https://www.postman.com/downloads/" target="_blank" rel="noopener">Postman</a></p>
+<p><img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528134158.png" alt=""></p>
+<p>（PS：Postman 的 Chrome浏览器插件版已不再维护，不推荐使用了）</p>
+<p>2.安装好之后可以注册个账户进行登录</p>
+<p><img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528134645.png" alt=""></p>
+<p>3.界面操作的说明</p>
+<p><img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529012446.png" alt=""></p>
+<h4 id="二、接口测试"><a href="#二、接口测试" class="headerlink" title="二、接口测试"></a>二、接口测试</h4><p><strong>接口测试说明</strong></p>
+<p><img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528183501.png" alt=""></p>
+<p><strong>接口测试的流程</strong></p>
+<p>1.获取接口信息<br>一般是通过接口文档获取接口的基本调用方式和返回的数据说明，如果没接口文档，可通过抓包方式获取。<a href="http://localhost:4000/2017/05/15/stest/stest_fiddler%E7%9A%84%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">抓包教程</a></p>
+<p>2.设计接口测试用例<br>根据接口信息，按照接口测试用例的设计方法，进行设计参数和预期返回结果。</p>
+<p>3.发起接口请求<br>使用工具或编程方式发起接口请求。</p>
+<p>4.验证返回信息<br>获取接口返回的结果，进行解析和验证。</p>
+<p><img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528181633.png" alt=""></p>
+<p><strong>Postman接口请求过程</strong></p>
+<pre><code>![](https://gitee.com/kolenj/BlogImages/raw/master/20200528175913.png)</code></pre><p><strong>通过chrome浏览器打开开发者工具(快捷键F12)查看请求和响应的一个实例</strong></p>
+<ul>
+<li><p>请求</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528181724.png" alt=""></p>
+</li>
+<li><p>响应 </p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528181444.png" alt=""></p>
+</li>
+</ul>
+<h4 id="三、请求头域的一些相关说明"><a href="#三、请求头域的一些相关说明" class="headerlink" title="三、请求头域的一些相关说明"></a>三、请求头域的一些相关说明</h4><ul>
+<li><p>请求有时需要携带Refer、Content-type、Cookies、token等参数才能成功访问</p>
+</li>
+<li><p>Post方法请求时请求体Body的参数携带方式与请求头域Content-Type的类型相对应：</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528190524.png" alt=""></p>
+</li>
+</ul>
+<p>(PS：请求体body里携带的参数格式有：<br>form-data(键-值/文件)/ x-www-form-urlencoded(键值对)/ binary(文件)/<br>raw(text/plain、application/json、application/javascript、application(text)/xml、text/html) )</p>
+<h4 id="四、环境变量与全局变量"><a href="#四、环境变量与全局变量" class="headerlink" title="四、环境变量与全局变量"></a>四、环境变量与全局变量</h4><ul>
+<li><p>创建环境变量/全局变量</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528211818.png" alt=""></p>
+</li>
+<li><p>通过”“方式进行变量的引用(使用)</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200528212421.png" alt=""></p>
+</li>
+</ul>
+<h4 id="五、测试沙箱和测试断言"><a href="#五、测试沙箱和测试断言" class="headerlink" title="五、测试沙箱和测试断言"></a>五、测试沙箱和测试断言</h4><ul>
+<li><p>作用:</p>
+<p>  请求前脚本设置请求前置操作如设置变量等；</p>
+<p>  请求后对状态码、响应头、响应正文等信息进行断言操作；</p>
+<p>  使用console控制台进行调试；</p>
+<p>  通过console查看接口请求返回信息，以及对脚本中使用的变量进行输出调试等操作。</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529010451.png" alt=""></p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529010827.png" alt=""></p>
+</li>
+</ul>
+<h4 id="六、多接口测试管理-测试集与测试驱动"><a href="#六、多接口测试管理-测试集与测试驱动" class="headerlink" title="六、多接口测试管理-测试集与测试驱动"></a>六、多接口测试管理-测试集与测试驱动</h4><ul>
+<li><p>运行步骤：</p>
+<p>  1.点击运行要测试的数据集(执行Runner)</p>
+<p>  2.设置要使用的环境，循环次数，延迟设定，导入数据集(数据格式支持json/cvs,另外要注意编码问题，建议使用”utf-8”格式)</p>
+<p>  (PS:在测试沙箱的Pre-request Script、Tests中引用数据格式为：data.xxx，请求头中为：)</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529022314.png" alt=""></p>
+</li>
+<li><p>执行结果：</p>
+<p>  <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529022705.png" alt=""></p>
+</li>
+</ul>
+<h4 id="七、cookies的获取方式及后续操作"><a href="#七、cookies的获取方式及后续操作" class="headerlink" title="七、cookies的获取方式及后续操作"></a>七、cookies的获取方式及后续操作</h4><p>1.先网页登录后使用浏览器的开发者工具在Network选项栏查找到cookie值，后续使用Postman的请求中在Headers项通过“Cookie”携带上该cookie</p>
+<p><img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529025810.png" alt=""></p>
+<p>2.先网页登录后使用浏览器的开发者工具在Application选项栏点击”Cookies”选项，其中会含有用户成功登录后维持该请求会话的信息数据，<br>  一般会是含有“sess”字段的 键值对，找到之后在postman的cookies面板添加该请求域名(网址)，然后添加cookie，将模板的cookie键值对<br>  替换即可</p>
+<p> <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200529030311.png" alt=""></p>
+<p>3.直接在Postman中通过账户密码进行成功登录，Postman的Cookies管理器自动将请求后的cookies保存下来，后续的请求(同一个网站)则会<br>  自动引用这些cookies</p>
+<h4 id="八、Newman命令与Jenkins持续集成"><a href="#八、Newman命令与Jenkins持续集成" class="headerlink" title="八、Newman命令与Jenkins持续集成"></a>八、Newman命令与Jenkins持续集成</h4><ul>
+<li>Newman命令与Jenkins持续集成</li>
+</ul>
+<h4 id="九、monitor的使用"><a href="#九、monitor的使用" class="headerlink" title="九、monitor的使用"></a>九、monitor的使用</h4><ul>
+<li>monitor的使用[<a href="https://www.cnblogs.com/zouzou-busy/p/11134683.html]" target="_blank" rel="noopener">https://www.cnblogs.com/zouzou-busy/p/11134683.html]</a></li>
+</ul>
 
-4、post方法请求时，请求体body里携带的参数格式有：form-data(文件上传 )/x-www-form-urlencoded/binary/
-   raw(text/plain、application/json、application/javascript、application(text)/xml、text/html)   
-   相对应于请求头Request Headers中Content-Type：
-
-5、请求有时需要Refer、Content-type、Cookies、token等参数才能成功访问
-
-6、环境变量与请求参数的参数化，既使用{{xxx}}获取对应环境中的xxx参数的值
-
-7、测试沙箱：
-    postman测试沙箱是结合js脚本完成测试中的功能，在请求发起前后实现部分测试操作。
-    常用功能：
-    请求前脚本设置请求前置操作如设置变量等。
-    请求后对状态码、响应头、响应正文等信息进行断言操作。
-    使用console控制台进行调试。
-    通过console查看接口请求返回信息，一级对脚本中使用的变量进行输出调试等操作。
-    (Pre-request Script-设置请求前脚本，Tests-断言判断 )
-
-8、数据集与数据驱动：
-    点击运行数据集执行Run
-    文件数据格式支持json/cvs
-    在Pre-request Script、Tests引用数据格式为data.xxx
-
-9、Newman命令与Jenkins持续集成
-
-10、monitor的使用[https://www.cnblogs.com/zouzou-busy/p/11134683.html]</code></pre>
       
     </div>
     <div class="article-footer">
@@ -425,7 +486,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2017/03/15/stest/stest_postman/" title="postman工具使用指南" target="_blank" rel="external">http://yoursite.com/2017/03/15/stest/stest_postman/</a>
+      <a href="http://yoursite.com/2017/03/15/stest/stest_postman/" title="postman使用指南及实战" target="_blank" rel="external">http://yoursite.com/2017/03/15/stest/stest_postman/</a>
     </li>
     
     <li class="post-copyright-license">
