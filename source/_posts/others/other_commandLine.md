@@ -9,7 +9,7 @@ categories:
 
 ---
 
-**基本命令**
+**基本常用**
           
       1、ifconfig                    （查看ip地址-Linux
          ipconfig                    （查看ip地址-Windows
@@ -49,8 +49,12 @@ categories:
          
          
       7、chmod 命令用于改变文件或目录的访问权限
-      
+        -chmod ug+w,o-w file1.txt file2.txt                （将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入
+        
+        
       8、chown 命令用于更改某个文件或目录的属主和属组
+        -chown kolenj:kolenjgroup file.txt                 （将文件 file.txt 的拥有者设为 kolenj，群体的使用者 kolenjgroup
+        -chown -R kolenj:kolenjgroup *                      (将目前目录下的所有文件与子目录的拥有者皆设为 kolenj, 群体的使用者 kolenjgroup
 
       
 **文件/目录的操作**
@@ -64,7 +68,7 @@ categories:
 
       3、touch hello.py /or 直接 vi/vim 文件名   （创建文件
 
-      4、chmod u/g/o/a +/-/= rwx 文件  （ chmod 777 test.py 其 r：4   w：2   x：1
+      4、chmod [u/g/o/a][+/-/=rwx] 文件  （ 另一种表示：chmod 777 test.py 其 r：4   w：2   x：1
          [-R : 对目前目录下的所有档案与子目录进行相同的权限变更(即以递回的方式逐个变更)]
 
       5、ls -a/l/d   （-a 显示所有文件/-l	long 长格式显示/-d 查看目录属性
@@ -84,6 +88,42 @@ categories:
           more和less一般用于显示文件内容超过一屏的内容，并且提供翻页的功能。
           tail 和 head分别显示文件的后几行和前几行内容。常用于大文件的截取。
           [参考：https://blog.csdn.net/lijing742180/article/details/83409704]
+          
+**解压缩命令**
+    
+(c：打包文件 x：代表解压 v：显示运行过程 f：指定文件名)
+         
+* 压缩
+
+
+        tar -cvf jpg.tar *.jpg              //将目录里所有jpg文件打包成tar.jpg 
+        
+        tar -czf jpg.tar.gz *.jpg           //将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz
+        
+        tar -cjf jpg.tar.bz2 *.jpg          //将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2
+        
+        tar -cZf jpg.tar.Z *.jpg            //将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z
+        
+        rar a jpg.rar *.jpg                 //rar格式的压缩，需要先下载rar for linux
+        
+        zip jpg.zip *.jpg                   //zip格式的压缩，需要先下载zip for linux
+        
+* 解压
+        
+        
+        tar -xvf file.tar                   //解压 tar包
+        
+        tar -xzvf file.tar.gz               //解压tar.gz
+        
+        tar -xjvf file.tar.bz2              //解压 tar.bz2
+        
+        tar -xZvf file.tar.Z                //解压tar.Z
+        
+        unrar e file.rar                    //解压rar
+        
+        unzip file.zip                      //解压zip
+
+
 
 **其他常用命令**
 
@@ -98,20 +138,15 @@ categories:
       4、find ./ -name '*.sh'  （查找文件/文件夹
 
       5、sudo passwd root  （刚刚装好的系统切换到root用户
+        -sudo 临时拥有管理员的权限(执行)
 
       6、systemctl enable/restart tinyproxy.service  （重启某个服务
 
       7、iptables -I INPUT -p tcp --dport 8888 -j ACCEPT  （防火墙开发某个端口
 
       8、systemctl stop firewalld.service  （关闭防火墙
-
-      9、tar -czvf test.tar.gz a.c  （ 压缩 a.c文件为test.tar.gz
-         tar -xzvf test.tar.gz   （ 解压test.tar.gz文件
-
-         压缩用法：tar -jcvf 压缩包包名 文件...(tar jcvf bk.tar.bz2 *.c)
-         解压用法：tar -jxvf 压缩包包名 (tar jxvf bk.tar.bz2)
-
-      10、ln 源文件 链接文件
+         
+      9、ln 源文件 链接文件
          ln -s 源文件 链接文件
          [如果没有-s选项代表建立一个硬链接文件，两个文件占用相同大小的硬盘空                  
          间，即使删除了源文件，链接文件还是存在，所以-s选项是更常见的形式。]

@@ -32,7 +32,7 @@ categories:
 4、拦截过滤的简单设置：
 
 * 在右边面板点击“Filters”，
-* 在弹出的面板中勾选“Use Filters"，其中"-No Zone Filter-"可选内网(intranet)和外围(internet),
+* 在弹出的面板中勾选“Use Filters"，其中"-No Zone Filter-"可选内网(intranet)和外网(internet),
 * "-No Host Filter-"可选隐藏下面的主机请求(Hide)/显示下面的主机请求(Show)/标记下面的主机请求(Flag)
 * 然后在右边”Actions“选择立即执行过滤条件(Run)/保存该过滤条件(Save)/载入其他过滤条件(Load),具体操作如下图：
 
@@ -90,5 +90,5 @@ categories:
 ####  五、Fiddler的一些高级用法
 [官方文档/支持](https://www.telerik.com/support/fiddler)
 
-[参考1，](https://my.oschina.net/leejun2005/blog/399108)
+[参考1](https://my.oschina.net/leejun2005/blog/399108)
 [参考2](https://yq.aliyun.com/articles/594456?utm_content=m_1000000403)

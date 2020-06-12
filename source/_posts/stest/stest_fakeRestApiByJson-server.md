@@ -2,8 +2,7 @@
 title: Fake RestApi For Testing Or Mocking
 date: 2019-03-25 09:09:04
 tags: 
-- Fake Rest Api
-- json-server
+- Mock/Fake Api
 
 categories:
 - 软件测试

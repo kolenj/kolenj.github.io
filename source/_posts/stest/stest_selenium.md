@@ -1,5 +1,5 @@
 ---
-title: selenium + python 自动化测试
+title: selenium
 date: 2017-03-25 09:09:04
 tags: 
 - selenium
@@ -9,191 +9,175 @@ categories:
 
 ---
 
-##### 一、python+selenium环境的搭建
+##### 一、python+selenium自动化测试环境的搭建
 
-      
-      前提条件：手机(移动端设备)和PC处于同一局域网 
-      
-      如果手机端有”网络ADB调试“功能：
-          1、在手机端打开“Android调试”、“网络ADB调试"即可通过adb命令远程连接
-          2、adb connect 192.168.3.11(我手机端的ip)
-          
-      如果手机端没有”网络ADB调试“功能：
-          1、通过usb将手机连接电脑，并开启Android调试和网络ADB调试（Android 9.0）
-          2、测试是否连接成功：adb connect 设备ip地址（或者：ping 设备ip地址）
-             （如果connect拒绝，用adb tcpip模式重启adb）
-          3、adb devices 显示成功连接则表示调试环境已创建成功
+* python的下载与安装
 
-##### 二、常用adb命令
+    * 1、根据自身需求下载相应的 [python](https://www.python.org/downloads/) 版本
+    
+    * 2、默认安装就行(勾选将python添加到系统环境中)，然后打开cmd，执行：python -V 显示python版本即表示安装成功
+    
+        ![](https://gitee.com/kolenj/BlogImages/raw/master/20200612002801.png)
 
-      查看手机信息：
-          adb shell ifconfig          //查看手机ip
-          adb shell getprop ro.build.version.release        //查看系统版本
-          (更多参考： https://www.cnblogs.com/zhuminghui/p/10472193.html )
+---
+
+* pycharm的下载与安装
+
+    * 1、官方下载 [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows) 的社区版
+
+    * 2、双击默认安装即可
+    
+    * 3、在设置中配置python的安装目录(Project Interpreter)
+    
+        ![](https://gitee.com/kolenj/BlogImages/raw/master/20200612003415.png)
+
+---
+
+* selenium两种常见安装方式
+
+    * 1、在终端(cmd中)使用pip命令直接安装 (PS: pip是python包安装及管理工具)
+        * pip install selenium
+    
+    * 2、在pycharm->file->Settings->Project（Interpreter） 下面点击"+" 搜索selenium 包进行安装
+    
+        ![](https://gitee.com/kolenj/BlogImages/raw/master/20200611235446.png)
       
-      adb服务的开启与关闭：
-          adb kill-server             //关闭adb服务
-          adb start-server            //开启adb服务
-        
-      查看/无线调试-设备：
-          adb devices              //显示连接设备
-          adb -s 设备号 指令         //多个设备时指定操作某个设备
-          
-          adb tcpip 5555           //以tcpip模式开启adb，端口为5555
-          adb connect IP地址/IP地址:端口      //连接设备
-          adb disconnect ip/ip:端口          //断开连接
-      
-      查看当前应用/Activity：
-          dumpsys window windows | grep mFocusedApp       //查看当前的app包名和activity -/执行adb shell命令后再执行）
-         （Linux/Mac系统下：adb shell dumpsys activity | grep "mFocusedActivity"
-      
-      列出包名：
-      adb shell pm list package [-s/f]
-      -s：列出系统应用
-      -f：列出应用包名及对应的apk名及存放位置
-      
-      上传与下载：
-      adb push <本地文件> <远程路径>        //上传
-      adb pull <远程路径> <本地路径>        //下载
-      
-      安装与卸载：
-      adb install [-r] xxx.apk           //-r：强制安装，最后一个参数时apk的全路径（文件位于当前主机端）
-      adb shell pm install [-r] /data/local/tmp/xxx.apk    //安装的apk来源于设备中，例：data/local/tmp 目录
-      adb uninstall [k] <PACKAGE>        //卸载  <PACHAGE>应用包名
-      adb shell pm uninstall [-k] <PACKAGE>        //-k：卸载应用且保留数据与缓存，不加的话，则全部删除
-      
-      截图和录制视频
-      adb shell screencap -p /sdcard/test_screencap01.png
-      adb shell screenrecord /sdcard/test_record01.mp4
+    * 3、在项目中，如果能正确导入: from selenium import webdriver ，则表示selenium已安装好 
+
+---
+
+* 浏览器驱动的下载与安装
  
-      adb logcat/
-      adb logcat -s tag         // 查看指定标签日志
-      adb logcat -v time >D:\android_log.txt
+    * 1、下载浏览器驱动(PS:驱动的版本要与浏览器当前版本对应!!!)，比如 [chromedriver.exe](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+        
+         ![](https://gitee.com/kolenj/BlogImages/raw/master/20200612000850.png)
+        
+    * 2、然后将其放到python安装目录的”Scripts“目录下
+    
+         ![](https://gitee.com/kolenj/BlogImages/raw/master/20200612001946.png)
+
+---
+        
+* 测试环境是否搭建成功
+
+    * 1、打开PyCharm，创建一个新项目
+    * 2、新建一个helloworld.py文件，具体代码如下
+    
+        ![](https://gitee.com/kolenj/BlogImages/raw/master/20200612004445.png)
+    
+    * 3、如果能正常打开chrome浏览器并成功访问网站，则表示环境已全部搭建成功
        
 
-##### 三、appium的安装 
 
-      1、官网下载对应系统版本的appium：
-         地址1：https://github.com/appium/appium-desktop/releases/
-         地址2：http://appium.io/downloads.html
-      2、双击执行.exe进行安装，设置都默认就好
-      3、安装成功之后打开，设置默认就好，地址：127.0.0.1/0.0.0.0，端口：443
-      
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200522125803.png)
-      
+##### 二、selenium常见需求
 
-##### 四、demo代码及常用API
+* 请求常见需求设置(加header)
 
-###### demo
 ```python
+    
+    # 获取浏览器设置(chrome) -from selenium.webdriver.chrome.options import Options
+    chrome_options = Options()
+    
+    chrome_options.add_argument('--headless')  # 浏览器不提供可视化页面(即无头模式)
+    chrome_options.add_argument('--user-agent=""')  # 设置请求头的User-Agent
+    chrome_options.add_argument('--window-size=1280x1024')  # 设置浏览器窗口大小，（--start-maximized  # 全屏窗口）
+    chrome_options.add_argument('--disable-infobars')  # 禁用浏览器正在被自动化程序控制的提示
+    chrome_options.add_argument('--incognito')  # 隐身模式（无痕模式）
+    chrome_options.add_argument('--hide-scrollbars')  # 隐藏滚动条
+    chrome_options.add_argument('--disable-javascript')  # 禁用javascript
+    chrome_options.add_argument('--blink-settings=imagesEnabled=false')  # 不加载图片, 提升速度
 
-    from appium import webdriver
-    import time
+
+    # 添加cookie访问
+    # chrome_options.add_argument('cookie=session-id=143-0027246-5158912')
     
-    # 初始化信息,方式二：
-    desired_caps = {
-    
-        # 基本信息：
-        "platformName": "Android",  # 对应平台 Android/IOS
-        "deviceName": "SAMSUNG",    # 设备名称
-        "platformVersion": "6.0",   # 手机/模拟器的系统版本号(设置里可查看)
+    # 设置代理
+    proxyIP = 'ip:port'
+    chrome_options.add_argument('--proxy-server'+proxyIP)   #无用户名密码认证的代理
+
+    driver = webdriver.Chrome(options=chrome_options)
+```
+
+* 元素等待(Implicit Waits)   
+   
+         driver.implicitly_wait(10) # seconds
+ 
+         
+* 元素等待(Explicit Waits)
+
+
+```python
+        from selenium import webdriver
+        from selenium.webdriver.common.by import By
+        from selenium.webdriver.support.ui import WebDriverWait
+        from selenium.webdriver.support import expected_conditions as EC
         
-        # 避免输入的中文乱码：
-        "unicodeKeyboard": True,
-        "resetKeyboard": True,
-
-        # 打开应用的信息：
-        # (windows系统获取app相关信息：cmd下执行 1、 adb shell 2、dumpsys window windows | grep mFocusedApp  即可查看到当前打开的app包名和activity)
-    
-        # 不同版本包名和active可能不一样
-
-        # 打开设置：
-        # "appPackage": "com.android.setting",   # 应用的包名
-        # "appActivity": ".Settings",  # 打开应用的页面Activity
-    
-        # 打开自带浏览器：
-        # "appPackage": "com.android.browser",   # 应用的包名
-        # "appActivity": ".BrowserActivity",  # 打开应用的页面Activity
-    
-        # 打开qq
-        "appPackage": "com.tencent.mobileqq",   # 应用的包名
-        "appActivity": ".activity.SplashActivity",  # 打开应用的页面Activity
-        "noReset": True  # 不要重置应用数据！！！
-    }
-    
-    driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
-    time.sleep(10)
-    driver.quit()
-
+        driver = webdriver.Firefox()
+        driver.get("http://somedomain/url_that_delays_loading")
+        try:
+            element = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.ID, "myDynamicElement"))
+            )
+        finally:
+            driver.quit()
 ```
-###### 常用API
+       
+* 元素等待(Custom Wait Conditions) 
+
 ```python
-
-    # 根据应用包名和activity打开应用：
-    # driver.start_activity("com.android.messaging", ".ui.conversationlist.ConversationListActivity")
-    # time.sleep(5)
-    
-    # 代码获取当前包名和界面activity：
-    # print("当前应用包名："+driver.current_package)
-    # print("当前应用界面的activity："+driver.current_activity)
-    
-    # app应用的安装与卸载
-    # if driver.is_app_installed("com.android.music"):    # 判断应用是否已安装，这里以“com.android.music”为例
-    #     print("com.android.music has installed")
-    #     # 卸载应用(根据包名)
-    #     driver.remove_app("com.android.music")
-    # else:
-    #     # 安装应用(apk的路径)
-    #     driver.install_app("")
-    #     print("已执行安装")
-    
-    # 将应用置于后台运行，单位时间为秒
-    # driver.background_app(2)
-    
-    # 元素等待方式1：
-    driver.implicitly_wait(10)  # 全局元素都设置为等待10s之内
-    
-    # 元素等待方式2：(对不同元素分别设置)
-    element = WebDriverWait(driver, 10, poll_frequency=1).until(
-            EC.presence_of_element_located((By.ID, 'prodDetails'))
-        )
-    
-    # 元素的常用操作方法：click()/点击,  send_keys("xxx")/输入发送内容,  clear()/清空内容，  get_attribute("xxx")/获取元素对应属性
-    # location()/获取元素起始xy坐标,  size()/获取元素的高和宽
-    
-    # 获取手机分辨率
-    print(driver.get_window_size())
-    
-    # 保存截图
-    driver.get_screenshot_as_file("example.png")
-    
-    # 获取当前手机网络信息
-    print(driver.network_connection)
-    
-    # 设置手机网络
-    driver.set_network_connection(1)    # 数字代表详情进入方法里进行查看
-    
-    # 打开通知栏
-    driver.open_notifications()
-    
-    time.sleep(5)
-    
-    # 发送按键
-    driver.press_keycode(4)  # 4对应返回
-    
-    # driver的close_app()与quit()方法的区别
-    # driver.close_app()  # 只是关闭当前操作的app
-    # driver.quit()   # 直接关闭驱动对象，同时也关闭了所有关联的app    
+        class element_has_css_class(object):
+          """An expectation for checking that an element has a particular css class.
+        
+          locator - used to find the element
+          returns the WebElement once it has the particular css class
+          """
+          def __init__(self, locator, css_class):
+            self.locator = locator
+            self.css_class = css_class
+        
+          def __call__(self, driver):
+            element = driver.find_element(*self.locator)   # Finding the referenced element
+            if self.css_class in element.get_attribute("class"):
+                return element
+            else:
+                return False
+        
+        # Wait until an element with id='myNewInput' has class 'myCSSClass'
+        wait = WebDriverWait(driver, 10)
+        element = wait.until(element_has_css_class((By.ID, 'myNewInput'), "myCSSClass"))
 ```
 
+[官方文档](https://selenium-python.readthedocs.io/waits.html)
 
 
-##### 四、UIAutomatorViewer.bat 的使用
+##### 三、selenium加载元素(Locating Elements)
 
-    1、在Android\sdk\tools\bin下打开uiautomatorviewer.bat运行，期间不要关闭其关联的cmd窗口
-    2、进入到你想定位的页面，点击第二个图标按钮进行截图，进而定位分析元素等操作，如下图
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200522132955.png)
-      
+* selenium 的8种加载元素方法(PS：多个元素则将element替换为elements)
 
-          
+    * find_element_by_id
+    * find_element_by_nam
+    * find_element_by_link_text
+    * find_element_by_partial_link_text
+    * find_element_by_tag_name
+    * find_element_by_class_name
+    
+    * find_element_by_xpath
+    * find_element_by_css_selector
+    
+* selenium 以私有方法方式加载元素
+    
+        from selenium.webdriver.common.by import By
+    
+        driver.find_element(By.XPATH, '//button[text()="Some text"]')
+        driver.find_elements(By.XPATH, '//button')  # 多个元素
+
+* 以"xpath" 方式加载元素的例子
+
+     ![](https://gitee.com/kolenj/BlogImages/raw/master/20200612084558.png)
+
+[官方参考文档](https://selenium-python.readthedocs.io/locating-elements.html#locating-elements)
+[参考1](https://saucelabs.com/resources/articles/selenium-tips-css-selectors)
+[参考2](https://www.cnblogs.com/zidonghua/p/7430083.html#_label3)
+
+
    

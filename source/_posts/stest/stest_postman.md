@@ -5,7 +5,7 @@ tags:
 - 软件工具
  
 categories:
-- softwareTest
+- 软件测试
 
 ---
 
@@ -13,24 +13,40 @@ categories:
 ####  一、Postman的安装及基本使用
 1.官网下载安装 [Postman](https://www.postman.com/downloads/)
 
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200528134158.png)
+
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528134158.png"/>
+</div>
+
 
 （PS：Postman 的 Chrome浏览器插件版已不再维护，不推荐使用了）
 
 2.安装好之后可以注册个账户进行登录
 
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200528134645.png)
+
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528134645.png"/>
+</div>
+
 
 3.界面操作的说明
 
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200529012446.png)
+
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529012446.png"/>
+</div>
+
 
 
 ####  二、接口测试
 
 **接口测试说明**
 
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200528183501.png)
+
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528183501.png"/>
+</div>
+
 
 **接口测试的流程**
 
@@ -46,20 +62,36 @@ categories:
 4.验证返回信息
 获取接口返回的结果，进行解析和验证。
 
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200528181633.png)
+
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528181633.png"/>
+</div>
+
 
 **Postman接口请求过程**
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528175913.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528175913.png"/>
+</div>
+
 
 **通过chrome浏览器打开开发者工具(快捷键F12)查看请求和响应的一个实例**
 * 请求
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528181724.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528181724.png"/>
+</div>
+
 
 * 响应 
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528181444.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528181444.png"/>
+</div>
+
 
 
 ####  三、请求头域的一些相关说明
@@ -68,7 +100,11 @@ categories:
 
 * Post方法请求时请求体Body的参数携带方式与请求头域Content-Type的类型相对应：
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528190524.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528190524.png"/>
+</div>
+
 
 (PS：请求体body里携带的参数格式有：
 form-data(键-值/文件)/ x-www-form-urlencoded(键值对)/ binary(文件)/
@@ -79,11 +115,19 @@ raw(text/plain、application/json、application/javascript、application(text)/x
 
 * 创建环境变量/全局变量
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528211818.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528211818.png"/>
+</div>
+
 
 * 通过"{{变量名}}"方式进行变量的引用(使用)
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200528212421.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200528212421.png"/>
+</div>
+
 
 
 ####  五、测试沙箱和测试断言
@@ -97,9 +141,17 @@ raw(text/plain、application/json、application/javascript、application(text)/x
     
     通过console查看接口请求返回信息，以及对脚本中使用的变量进行输出调试等操作。
     
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529010451.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529010451.png"/>
+</div>
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529010827.png)
+
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529010827.png"/>
+</div>
+
 
 
 ####  六、多接口测试管理-测试集与测试驱动
@@ -112,23 +164,39 @@ raw(text/plain、application/json、application/javascript、application(text)/x
     
     (PS:在测试沙箱的Pre-request Script、Tests中引用数据格式为：data.xxx，请求头中为：{{xxx}})
     
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529022314.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529022314.png"/>
+</div>
+
     
 * 执行结果：
 
-    ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529022705.png)
+    
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529022705.png"/>
+</div>
+
     
 ####  七、cookies的获取方式及后续操作
 
 1.先网页登录后使用浏览器的开发者工具在Network选项栏查找到cookie值，后续使用Postman的请求中在Headers项通过“Cookie"携带上该cookie
 
-![](https://gitee.com/kolenj/BlogImages/raw/master/20200529025810.png)
+
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529025810.png"/>
+</div>
+
 
 2.先网页登录后使用浏览器的开发者工具在Application选项栏点击"Cookies"选项，其中会含有用户成功登录后维持该请求会话的信息数据，
   一般会是含有“sess”字段的 键值对，找到之后在postman的cookies面板添加该请求域名(网址)，然后添加cookie，将模板的cookie键值对
   替换即可
   
- ![](https://gitee.com/kolenj/BlogImages/raw/master/20200529030311.png)
+ 
+<div align="left">
+        <img width="900" height="600" src="https://gitee.com/kolenj/BlogImages/raw/master/20200529030311.png"/>
+</div>
+
   
 3.直接在Postman中通过账户密码进行成功登录，Postman的Cookies管理器自动将请求后的cookies保存下来，后续的请求(同一个网站)则会
   自动引用这些cookies
