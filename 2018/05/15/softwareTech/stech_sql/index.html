@@ -18,15 +18,15 @@
   
   
   <title>SQL常见操作 | Hexo</title>
-  <meta name="description" content="SQL基本查询 1、基本查询：select * from &lt;表名&gt;  2、条件查询：SELECT * FROM &lt;表名&gt; WHERE &lt;条件表达式&gt;             (常用的条件表达式：and&#x2F;or&#x2F;not&#x2F;，like &amp;apos;xx%xx&amp;apos;(%表示任意字符))  3、投影查询：SELECT 列1, 列2, 列3 FROM &lt;表名&amp;gt">
+  <meta name="description" content="SQL简介SQL 是一门用于访问和处理数据库的标准的(ANSI)结构化查询语言  SQL 可分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)  1、DML- SQL (结构化查询语言)是用于执行查询的语法，其也包含用于更新、插入和删除记录的语法  SELECT - 从数据库表中获取数据 UPDATE - 更新数据库表中的数据 DELETE - 从数据库表中删除数据 INSERT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL常见操作">
 <meta property="og:url" content="http://yoursite.com/2018/05/15/softwareTech/stech_sql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SQL基本查询 1、基本查询：select * from &lt;表名&gt;  2、条件查询：SELECT * FROM &lt;表名&gt; WHERE &lt;条件表达式&gt;             (常用的条件表达式：and&#x2F;or&#x2F;not&#x2F;，like &amp;apos;xx%xx&amp;apos;(%表示任意字符))  3、投影查询：SELECT 列1, 列2, 列3 FROM &lt;表名&amp;gt">
+<meta property="og:description" content="SQL简介SQL 是一门用于访问和处理数据库的标准的(ANSI)结构化查询语言  SQL 可分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)  1、DML- SQL (结构化查询语言)是用于执行查询的语法，其也包含用于更新、插入和删除记录的语法  SELECT - 从数据库表中获取数据 UPDATE - 更新数据库表中的数据 DELETE - 从数据库表中删除数据 INSERT">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-05-15T11:13:32.000Z">
-<meta property="article:modified_time" content="2020-05-19T09:43:18.660Z">
+<meta property="article:modified_time" content="2020-06-12T10:19:49.723Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
@@ -211,7 +211,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/softwareTest/">softwareTest</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a><span class="category-list-count">8</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a><span class="category-list-count">12</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +221,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fake-Rest-Api/" rel="tag">Fake Rest Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mock-Api/" rel="tag">Mock Api</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mockoon/" rel="tag">Mockoon</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/" rel="tag">appium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fildder/" rel="tag">fildder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json-server/" rel="tag">json-server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/" rel="tag">support</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" rel="tag">理论概念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" rel="tag">软件工具</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mock-Fake-Api/" rel="tag">Mock/Fake Api</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/" rel="tag">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fildder/" rel="tag">fildder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jmeter/" rel="tag">jmeter</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/" rel="tag">support</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" rel="tag">理论概念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" rel="tag">软件工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-frp/" rel="tag">远程桌面/frp</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -231,7 +231,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Fake-Rest-Api/" style="font-size: 13px;">Fake Rest Api</a> <a href="/tags/Linux/" style="font-size: 13px;">Linux</a> <a href="/tags/Mock-Api/" style="font-size: 13px;">Mock Api</a> <a href="/tags/Mockoon/" style="font-size: 13px;">Mockoon</a> <a href="/tags/appium/" style="font-size: 13px;">appium</a> <a href="/tags/docker/" style="font-size: 14px;">docker</a> <a href="/tags/fildder/" style="font-size: 13px;">fildder</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/json-server/" style="font-size: 13px;">json-server</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/selenium/" style="font-size: 13px;">selenium</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/support/" style="font-size: 13px;">support</a> <a href="/tags/trojan/" style="font-size: 13px;">trojan</a> <a href="/tags/vpn/" style="font-size: 13px;">vpn</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px;">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 13px;">快捷键</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" style="font-size: 14px;">理论概念</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" style="font-size: 14px;">软件工具</a>
+      <a href="/tags/Linux/" style="font-size: 14px;">Linux</a> <a href="/tags/Mock-Fake-Api/" style="font-size: 14px;">Mock/Fake Api</a> <a href="/tags/appium/" style="font-size: 14px;">appium</a> <a href="/tags/docker/" style="font-size: 14px;">docker</a> <a href="/tags/fildder/" style="font-size: 13px;">fildder</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/jmeter/" style="font-size: 14px;">jmeter</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/selenium/" style="font-size: 13px;">selenium</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/support/" style="font-size: 13px;">support</a> <a href="/tags/trojan/" style="font-size: 13px;">trojan</a> <a href="/tags/vpn/" style="font-size: 13px;">vpn</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px;">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 13px;">快捷键</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" style="font-size: 14px;">理论概念</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" style="font-size: 14px;">软件工具</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-frp/" style="font-size: 13px;">远程桌面/frp</a>
     </div>
   </div>
 
@@ -240,7 +240,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -387,33 +387,74 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><strong>SQL基本查询</strong></p>
-<pre><code>1、基本查询：select * from &lt;表名&gt;
-
-2、条件查询：SELECT * FROM &lt;表名&gt; WHERE &lt;条件表达式&gt; 
-           (常用的条件表达式：and/or/not/，like &apos;xx%xx&apos;(%表示任意字符))
-
-3、投影查询：SELECT 列1, 列2, 列3 FROM &lt;表名&gt; WHERE &lt;条件表达式&gt;    
-           (让结果集只包含指定列这种查询操作称为投影查询)
-           SELECT 列1 别名1, 列2 别名2, 列3 别名3 FROM ...
-           (给列起别名)
-
-4、排序查询：使用ORDER BY对结果集进行排序，默认是升序、倒序排序使用DESC,可以对多个列进行排序
-            如果有WHERE子句，那么ORDER BY子句要放到WHERE子句后面
-            例：
-                SELECT id, name, gender, score
-                FROM students
-                WHERE class_id = 1
-                ORDER BY score DESC,gender;
-
-5、分页查询：使用“LIMIT &lt;pageSize&gt; OFFSET &lt;pageIndex&gt;”实现，
-            要查询出第N页的记录集：(PS:SQL记录集的索引从0开始)
-            假设LIMIT设定为pageSize，则pageIndex计算公式为pageSize * (N - 1)
-            例：
-                SELECT id, name, gender, score
-                FROM students
-                ORDER BY score DESC
-                LIMIT 3 OFFSET 3;</code></pre><p><strong>SQL进阶查询</strong></p>
+        <h4 id="SQL简介"><a href="#SQL简介" class="headerlink" title="SQL简介"></a>SQL简介</h4><p><strong>SQL 是一门用于访问和处理数据库的标准的(ANSI)结构化查询语言</strong></p>
+<ul>
+<li><p>SQL 可分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)</p>
+<ul>
+<li><p>1、DML- SQL (结构化查询语言)是用于执行查询的语法，其也包含用于更新、插入和删除记录的语法</p>
+<ul>
+<li>SELECT - 从数据库表中获取数据</li>
+<li>UPDATE - 更新数据库表中的数据</li>
+<li>DELETE - 从数据库表中删除数据</li>
+<li>INSERT INTO - 向数据库表中插入数据</li>
+</ul>
+</li>
+<li><p>2、DDL- SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束</p>
+<ul>
+<li><p>CREATE DATABASE - 创建新数据库</p>
+</li>
+<li><p>ALTER DATABASE - 修改数据库</p>
+</li>
+<li><p>CREATE TABLE - 创建新表</p>
+</li>
+<li><p>ALTER TABLE - 变更（改变）数据库表</p>
+</li>
+<li><p>DROP TABLE - 删除表</p>
+</li>
+<li><p>CREATE INDEX - 创建索引（搜索键）</p>
+</li>
+<li><p>DROP INDEX - 删除索引</p>
+<p>（PS：SQL 对大小写不敏感）</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="SQL基本查询"><a href="#SQL基本查询" class="headerlink" title="SQL基本查询"></a>SQL基本查询</h4><ul>
+<li><p>1、基本查询：</p>
+<ul>
+<li>select * from &lt;表名&gt;                         # 查询所有列(整个表)                           </li>
+<li>elect 列名称(,列名称…) FROM &lt;表名&gt;           # 查询指定列</li>
+<li>select distinct 列名 from &lt;表名&gt;              # 关键词 DISTINCT 用于返回唯一不同的值</li>
+</ul>
+</li>
+<li><p>2、条件查询：</p>
+<ul>
+<li>SELECT * FROM &lt;表名&gt; WHERE &lt;条件表达式&gt; <pre><code>(常用的条件表达式逻辑算法：and/or/not/，like &apos;xx%xx&apos;(%表示任意字符))</code></pre></li>
+</ul>
+</li>
+<li><p>3、投影查询：<br>SELECT 列1, 列2, 列3 FROM &lt;表名&gt; WHERE &lt;条件表达式&gt;    </p>
+<pre><code>(让结果集只包含指定列这种查询操作称为投影查询)
+SELECT 列1 别名1, 列2 别名2, 列3 别名3 FROM ...
+(给列起别名)</code></pre></li>
+<li><p>4、排序查询：<br>使用ORDER BY对结果集进行排序，默认是升序、倒序排序使用DESC,可以对多个列进行排序</p>
+<pre><code>如果有WHERE子句，那么ORDER BY子句要放到WHERE子句后面
+例：
+    SELECT id, name, gender, score
+    FROM students
+    WHERE class_id = 1
+    ORDER BY score DESC,gender;</code></pre></li>
+<li><p>5、分页查询：<br>使用“LIMIT <pageSize> OFFSET <pageIndex>”实现，</p>
+<pre><code>要查询出第N页的记录集：(PS:SQL记录集的索引从0开始)
+假设LIMIT设定为pageSize，则pageIndex计算公式为pageSize * (N - 1)
+例：
+    SELECT id, name, gender, score
+    FROM students
+    ORDER BY score DESC
+    LIMIT 3 OFFSET 3;</code></pre></li>
+</ul>
+<p><strong>SQL进阶查询</strong></p>
 <pre><code>6、聚合查询：
 
 7、多表查询：
@@ -474,12 +515,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2018/05/15/softwareTech/stech_docker/" title="Docker的安装"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2018/05/15/softwareTech/stech_database/" title="数据库常见操作"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2018/05/15/stest/stest_web_automated_test/" title="Web自动化测试(python+selenium)"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/05/15/softwareTech/stech_docker/" title="Docker的安装"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
