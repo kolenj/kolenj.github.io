@@ -17,21 +17,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>docker常用命令 | Hexo</title>
-  <meta name="description" content="一、docker镜像常用命令常用参数说明：     -a&#x2F;-filter&#x2F;-f                                   （所有&#x2F;过滤条件&#x2F;强制执行---常用参数说明  搜索镜像：     docker search 镜像名                             （搜索镜像     docker search --filter&#x3D;is-offical&#x3D;tr">
+  <title>使用Docker搭建微服务 | Hexo</title>
+  <meta name="description" content="一、使用Docker搭建Tomcat 1、搜索Tomcat镜像  docker search tomcat   2、拉取Tomcat镜像  docker pull tomcat (tomcat:8.0 -拉取指定的版本,默认是最新版本latest)   3、启动Tomcat容器  docker run -d -p 8080:8080 tomcat   (-d 允许后台运行，-p 端口映射[宿主机端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker常用命令">
-<meta property="og:url" content="http://yoursite.com/2016/06/23/softwareTech/stech_docker_command/index.html">
+<meta property="og:title" content="使用Docker搭建微服务">
+<meta property="og:url" content="http://yoursite.com/2018/07/15/softwareTech/stech_docker_microservices/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一、docker镜像常用命令常用参数说明：     -a&#x2F;-filter&#x2F;-f                                   （所有&#x2F;过滤条件&#x2F;强制执行---常用参数说明  搜索镜像：     docker search 镜像名                             （搜索镜像     docker search --filter&#x3D;is-offical&#x3D;tr">
+<meta property="og:description" content="一、使用Docker搭建Tomcat 1、搜索Tomcat镜像  docker search tomcat   2、拉取Tomcat镜像  docker pull tomcat (tomcat:8.0 -拉取指定的版本,默认是最新版本latest)   3、启动Tomcat容器  docker run -d -p 8080:8080 tomcat   (-d 允许后台运行，-p 端口映射[宿主机端">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2016-06-23T01:29:22.000Z">
-<meta property="article:modified_time" content="2020-06-09T16:39:39.211Z">
+<meta property="og:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200613110934.png">
+<meta property="article:published_time" content="2018-07-15T11:13:32.000Z">
+<meta property="article:modified_time" content="2020-06-14T04:15:37.921Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/kolenj/BlogImages/raw/master/20200613110934.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yoursite.com/2016/06/23/softwareTech/stech_docker_command/index.html">
+  <link rel="canonical" href="http://yoursite.com/2018/07/15/softwareTech/stech_docker_microservices/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -211,7 +213,7 @@
   <div class="widget">
     <h3 class="widget-title">分类</h3>
     <div class="widget-body">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a><span class="category-list-count">12</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/others/">others</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA/">个人</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BB%BA%E7%AB%99/">建站</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E6%9C%AF/">软件技术</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/">软件测试</a><span class="category-list-count">12</span></li></ul>
     </div>
   </div>
 
@@ -221,7 +223,7 @@
   <div class="widget">
     <h3 class="widget-title">标签</h3>
     <div class="widget-body">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mock-Fake-Api/" rel="tag">Mock/Fake Api</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/" rel="tag">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fildder/" rel="tag">fildder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jmeter/" rel="tag">jmeter</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/" rel="tag">support</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" rel="tag">理论概念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" rel="tag">软件工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-frp/" rel="tag">远程桌面/frp</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mock-Fake-Api/" rel="tag">Mock/Fake Api</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/appium/" rel="tag">appium</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fildder/" rel="tag">fildder</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jmeter/" rel="tag">jmeter</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/selenium/" rel="tag">selenium</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/" rel="tag">support</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/trojan/" rel="tag">trojan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">vpn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/" rel="tag">基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="tag">快捷键</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" rel="tag">正则表达式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" rel="tag">理论概念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" rel="tag">软件工具</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-frp/" rel="tag">远程桌面/frp</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -231,7 +233,7 @@
   <div class="widget">
     <h3 class="widget-title">标签云</h3>
     <div class="widget-body tagcloud">
-      <a href="/tags/Linux/" style="font-size: 14px;">Linux</a> <a href="/tags/Mock-Fake-Api/" style="font-size: 14px;">Mock/Fake Api</a> <a href="/tags/appium/" style="font-size: 14px;">appium</a> <a href="/tags/docker/" style="font-size: 14px;">docker</a> <a href="/tags/fildder/" style="font-size: 13px;">fildder</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/jmeter/" style="font-size: 14px;">jmeter</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/selenium/" style="font-size: 13px;">selenium</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/support/" style="font-size: 13px;">support</a> <a href="/tags/trojan/" style="font-size: 13px;">trojan</a> <a href="/tags/vpn/" style="font-size: 13px;">vpn</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 14px;">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 13px;">快捷键</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" style="font-size: 14px;">理论概念</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" style="font-size: 14px;">软件工具</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-frp/" style="font-size: 13px;">远程桌面/frp</a>
+      <a href="/tags/Linux/" style="font-size: 13.5px;">Linux</a> <a href="/tags/Mock-Fake-Api/" style="font-size: 13.5px;">Mock/Fake Api</a> <a href="/tags/appium/" style="font-size: 13.5px;">appium</a> <a href="/tags/docker/" style="font-size: 14px;">docker</a> <a href="/tags/fildder/" style="font-size: 13px;">fildder</a> <a href="/tags/git/" style="font-size: 13.5px;">git</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/jmeter/" style="font-size: 13.5px;">jmeter</a> <a href="/tags/markdown/" style="font-size: 13px;">markdown</a> <a href="/tags/python/" style="font-size: 13px;">python</a> <a href="/tags/selenium/" style="font-size: 13px;">selenium</a> <a href="/tags/sql/" style="font-size: 13.5px;">sql</a> <a href="/tags/support/" style="font-size: 13px;">support</a> <a href="/tags/trojan/" style="font-size: 13px;">trojan</a> <a href="/tags/vpn/" style="font-size: 13px;">vpn</a> <a href="/tags/%E5%9B%BE%E5%BA%8A/" style="font-size: 13.5px;">图床</a> <a href="/tags/%E5%9F%BA%E7%A1%80/" style="font-size: 13px;">基础</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" style="font-size: 13px;">快捷键</a> <a href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" style="font-size: 13px;">正则表达式</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 13px;">爬虫</a> <a href="/tags/%E7%90%86%E8%AE%BA%E6%A6%82%E5%BF%B5/" style="font-size: 13.5px;">理论概念</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/" style="font-size: 13.5px;">软件工具</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2-frp/" style="font-size: 13px;">远程桌面/frp</a>
     </div>
   </div>
 
@@ -240,7 +242,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -340,14 +342,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-softwareTech/stech_docker_command" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-softwareTech/stech_docker_microservices" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      docker常用命令
+      使用Docker搭建微服务
     </h1>
   
 
@@ -355,8 +357,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2016/06/23/softwareTech/stech_docker_command/" class="article-date">
-	  <time datetime="2016-06-23T01:29:22.000Z" itemprop="datePublished">2016-06-23</time>
+	<a href="/2018/07/15/softwareTech/stech_docker_microservices/" class="article-date">
+	  <time datetime="2018-07-15T11:13:32.000Z" itemprop="datePublished">2018-07-15</time>
 	</a>
 </span>
         
@@ -376,139 +378,47 @@
 
 	<span class="article-read hidden-xs">
     	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="/2016/06/23/softwareTech/stech_docker_command/" class="leancloud_visitors"  data-flag-title="docker常用命令">
+    	<span id="/2018/07/15/softwareTech/stech_docker_microservices/" class="leancloud_visitors"  data-flag-title="使用Docker搭建微服务">
 			<span class="leancloud-visitors-count">0</span>
 		</span>
     </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2016/06/23/softwareTech/stech_docker_command/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/07/15/softwareTech/stech_docker_microservices/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h4 id="一、docker镜像常用命令"><a href="#一、docker镜像常用命令" class="headerlink" title="一、docker镜像常用命令"></a>一、docker镜像常用命令</h4><pre><code>常用参数说明：
-    -a/-filter/-f                                   （所有/过滤条件/强制执行---常用参数说明
-
-搜索镜像：
-    docker search 镜像名                             （搜索镜像
-    docker search --filter=is-offical=true ngix
-    docker search --filter=stars=10 tensorflow
-
-拉取镜像：
-    docker pull [服务器]/镜像名:版本号                 （不指定版本号则默认拉取最新版本=镜像名:latest
-    docker images                                     (列出本机已拉取的镜像
-    docker tag 镜像名 标签名                           (给镜像添加标签
-
-查看镜像：
-    docker inspect 镜像名                               (查看镜像信息
-    docker inspect -f {{".Architecture"}} mysql         (根据过滤条件查看镜像信息
-
-删除镜像：
-    docker rmi 镜像的id/标签                             （删除镜像
-    docker image prune                                  （清理镜像，-a，-f
-
-
-创建镜像的3种方式：
-    1、基于已有容器创建
-          docker commit -m &quot;added a new file &quot; -a &quot;kolenj&quot; 容器id test:0.1
-    2、基于本地模板导入
-          cat ubuntu-18.04-x86_64-minimal.tar.gz | docker import - ubuntu:l8.04
-    3、基于Dockerfile创建
-          docker build -t 镜像名 Dockerfile路径          （比如：docker build -t tomcat7 . 
-
-
-存出与载入镜像：
-    docker load -i ubuntu_18.04.tar                      (载入镜像
-    docker save -o ubuntu 18.04.tar ubuntu:18.04         （存出镜像
-
-上传镜像：
-    docker tag test:latest user/test:latest 
-    docker push user/test:latest</code></pre><h4 id="二、docker容器常用命令"><a href="#二、docker容器常用命令" class="headerlink" title="二、docker容器常用命令"></a>二、docker容器常用命令</h4><pre><code>参数说明：
-    -t 选项让Docker分配一个伪终端（pseudo－tty）并绑定到容器的标准输入上，-i 则让容器的标准输入保持打开
-    -p 端口映射[宿主机端口:容器的端口];   -v 路径(数据卷)映射 
-
-查看容器：
-    docker ps                                            （查看运行的容器    
-    docker ps -a                                        （查看所有的容器
-    docker container inspect 容器id                      （查看容器详情
-    docker top 容器id                                    （查看容器内进程信息
-
-查看容器使用的资源：
-    docker stats                                        （查看容器使用的资源信息，持续输出
-    docker stats --no-stream                            （查看容器使用的资源信息,只输出当前使用的资源
-    docker stats --no-stream 容器id                      （查看指定容器使用的资源信息
-    docker stats --no-stream                            （查看容器使用的资源信息,只输出当前使用的资源
-
-    docker stats --format &quot;table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}&quot;    (格式化输出结果信息
-
-创建/启动容器：
-    docker create -it 镜像id                             （创建
-    docker start [create命令产生的容器id]                  （启动
-
-    docker run ubuntu /bin/echo &apos;hello world&apos;             (创建并启动容器
-    docker run -it ubuntu:18.04 /bin/bash                 (启动一个 bash终端，允许用户进行交互：
-
-    docker run -d ubuntu /bin/sh -c &quot;while true; do echo hello world; sleep 1; done&quot;       (以守护状态运行
-
-停止容器：
-    docker pause/unpause 容器                              (暂停容器/继续运行容器
-    docker stop 容器                                      （该命令会首先向容器发送SIGTERM信号，等待一段超时时间后（默认为10秒），
-                                                           再发SIGKILL信号来终止容器
-    docker kill 容器                                      （直接发送SIGKILL信号强行终止容器
-
-
- 进入容器：
-    docker attach 容器name/id                             （进入容器方式一
-    docker exec -it 容器name/id  /bin/bash(=bash)         （进入容器方式二 ---推荐方式   
-
- 删除容器：
-     docker rm 容器                                       （删除处于终止/退出状态的容器，                                                  
-     docker rm -f 容器                                    （强制删除运行中的容器
-     docker container prune                               (清除掉所有处于停止状态的容器
-
-
- 导出容器：
-     docker export -o xxx.tar 容器id                      (方式一
-     docker export 容器id &gt; xxx.tar                       (方式二
-
-  导入容器：
-      docker import xxx.tar 镜像名:标签</code></pre><h4 id="三、docker其它命令"><a href="#三、docker其它命令" class="headerlink" title="三、docker其它命令"></a>三、docker其它命令</h4><pre><code>docker cp data 容器名/id:/tmp/                             (将本地路径data 复制到test容器的/tmp路径下
-docker container diff 容器名/id                           （查看容器内文件系统的变更
-docker container port 容器名/id                           （查看容器的端口映射
-docker logs [OPTIONS] CONTAINER                           (查看日志</code></pre><h4 id="四、docker数据管理"><a href="#四、docker数据管理" class="headerlink" title="四、docker数据管理"></a>四、docker数据管理</h4><pre><code>1、容器中的管理数据主要有两种方式：
-
-        数据卷(Data Volumes)：容器内数据直接映射到本地主机环境
-        数据卷容器(Data Volume Containers)：使用特定容器维护数据卷</code></pre><h4 id="五、Dockerfile"><a href="#五、Dockerfile" class="headerlink" title="五、Dockerfile"></a>五、Dockerfile</h4><pre><code>Dockerfile：
-    Dockerfile是一个文本格式的配置文件，用户可以使用Dockerfile来快速创建自定义的镜像
-它是由一行行命令语句组成，并且支持以＃开头的注释行。
-
-主要格式形式可以分为四部分： 基础镜像信息、维护者信息、镜像操作指令和容器启动时执行指令。
-
-FROM XXX                                表示以xxx镜像为基础来创建当前镜像，类似面向对象编程中的继承概念
-
-WORKDIR /webapps                        指明接下来的shell语句是运行在那个路径下
-
-COPY src/ /webapps                      表示将当前宿主机src/下所有文件拷贝到镜像的/webapps中
--ADD COPY与ADD的区别是 ADD命令时 &quot;src/&quot;    可以是uri（网络资源）
-
-RUN echo helloworld &gt;&gt; hw.txt           执行shell语句（在镜像构建时就执行
-
-CMD cat hw.txt                          执行shell语句（容器启动后执行
-CMD [&quot;cat&quot;, &quot;hw.txt&quot;]                   json格式，等同上面语句
--ENTRYPOINT  CMD与ENTRYPOINT区别，两者都存在，ENTRYPOINT命令后面是以非json格式时，执行ENTRYPOINT，CMD无效，
- 如果都是json格式则两者都执行
-
-EXPOSE                                  镜像暴露端口
-
-VOLUME /test/a 宿主机xxx路径               将容器的/test/a 映射到宿主机xxx路径下
-
-ENV A 10                                 创建环境变量A，从镜像构建到容器运行都有效
-ARG B 20                                 创建环境变量B，只在镜像构建时有效，相当默认值，在构建时可重新赋值
--例子：docker build -t test --build-arg B=100 .
-
-LABEL key=&quot;value&quot;                        就起到一个标识标签的作用
-ONBUILD 其他Dockerfile命令                 在它的&quot;子镜像&quot;-继承当前镜像构建镜像时才起作用</code></pre>
+        <h4 id="一、使用Docker搭建Tomcat"><a href="#一、使用Docker搭建Tomcat" class="headerlink" title="一、使用Docker搭建Tomcat"></a>一、使用Docker搭建Tomcat</h4><ul>
+<li><p>1、搜索Tomcat镜像</p>
+<ul>
+<li>docker search tomcat</li>
+</ul>
+</li>
+<li><p>2、拉取Tomcat镜像</p>
+<ul>
+<li>docker pull tomcat (tomcat:8.0 -拉取指定的版本,默认是最新版本latest)</li>
+</ul>
+</li>
+<li><p>3、启动Tomcat容器</p>
+<ul>
+<li><p>docker run -d -p 8080:8080 tomcat</p>
+<p>  (-d 允许后台运行，-p 端口映射[宿主机端口:容器端口])</p>
+</li>
+</ul>
+</li>
+<li><p>4、成功启动后在浏览器输入:IP:宿主机端口(localhost:8080) 能正确访问Tomcat主页,则表示容器的Tomcat已配置成功</p>
+<p>   <img src="https://gitee.com/kolenj/BlogImages/raw/master/20200613110934.png" alt=""></p>
+<p>  (PS:<a href="https://blog.csdn.net/laiyuan999/article/details/105802110" target="_blank" rel="noopener">问题(HTTP Status 404 – Not Found)解决参考</a>)</p>
+</li>
+</ul>
+<h4 id="二、使用Docker搭建java环境"><a href="#二、使用Docker搭建java环境" class="headerlink" title="二、使用Docker搭建java环境"></a>二、使用Docker搭建java环境</h4><h4 id="二、使用Docker搭建Jenkins"><a href="#二、使用Docker搭建Jenkins" class="headerlink" title="二、使用Docker搭建Jenkins"></a>二、使用Docker搭建Jenkins</h4><ul>
+<li>搜索Jenkins镜像<ul>
+<li>docker search jenkins</li>
+</ul>
+</li>
+</ul>
+<h4 id="二、使用Docker搭建nginx"><a href="#二、使用Docker搭建nginx" class="headerlink" title="二、使用Docker搭建nginx"></a>二、使用Docker搭建nginx</h4><h4 id="二、使用Docker搭建MySQL"><a href="#二、使用Docker搭建MySQL" class="headerlink" title="二、使用Docker搭建MySQL"></a>二、使用Docker搭建MySQL</h4><h4 id="二、使用Docker搭建Redis"><a href="#二、使用Docker搭建Redis" class="headerlink" title="二、使用Docker搭建Redis"></a>二、使用Docker搭建Redis</h4><h4 id="二、使用Docker搭建MongoDB"><a href="#二、使用Docker搭建MongoDB" class="headerlink" title="二、使用Docker搭建MongoDB"></a>二、使用Docker搭建MongoDB</h4>
       
     </div>
     <div class="article-footer">
@@ -517,7 +427,7 @@ ONBUILD 其他Dockerfile命令                 在它的&quot;子镜像&quot;-�
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2016/06/23/softwareTech/stech_docker_command/" title="docker常用命令" target="_blank" rel="external">http://yoursite.com/2016/06/23/softwareTech/stech_docker_command/</a>
+      <a href="http://yoursite.com/2018/07/15/softwareTech/stech_docker_microservices/" title="使用Docker搭建微服务" target="_blank" rel="external">http://yoursite.com/2018/07/15/softwareTech/stech_docker_microservices/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -564,12 +474,12 @@ ONBUILD 其他Dockerfile命令                 在它的&quot;子镜像&quot;-�
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2016/06/23/personal/otherUsefulTools/" title="好用软件/工具"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2019/03/25/stest/stest_sort/" title="软件测试方法的归类"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2015/09/25/personal/course_of_study/" title="学习历程"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/06/25/others/other_hexo/" title="hexo博客的搭建"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
