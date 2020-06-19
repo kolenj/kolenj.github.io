@@ -135,7 +135,7 @@ categories:
 
       3、ssh root@xxx.xxx.xxx.xxx(ip地址) -p xxx(端口)   （ssh连接Linux服务器
 
-      4、find ./ -name '*.sh'  （查找文件/文件夹
+      4、find .(/) -name '*.sh'  （查找文件/文件夹, 其中 ".(当前目录下查找)" or "/(从根目录查找-即全局查找)" 表示查找的路径范围
 
       5、sudo passwd root  （刚刚装好的系统切换到root用户
         -sudo 临时拥有管理员的权限(执行)
