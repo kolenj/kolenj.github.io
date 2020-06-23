@@ -1,9 +1,17 @@
 # links
-创造狮:
-  link: http://chuangzaoshi.com/
-  avatar: /images/favatar/chuangzaoshi-logo.png
-  desc: 为创意工作者而设计
-腾讯设计导航:
-  link: http://idesign.qq.com/
-  avatar: /images/favatar/idesign-logo.png
-  desc: 网罗全网高逼格的设计站点 
+TesterHome:
+  link: https://testerhome.com/
+  avatar: /images/favatar/testerhome-logo.jpg
+  desc: TesterHome软件测试社区
+测试窝:
+  link: https://www.testwo.com/
+  avatar: /images/favatar/testwo-logo.png
+  desc: 测试窝-自由 开放 分享
+51Testing:
+  link: http://www.51testing.com/
+  avatar: /images/favatar/51testing-logo.jpg
+  desc: 51Testing软件测试论坛
+FreeBuf:
+  link: https://www.freebuf.com/
+  avatar: /images/favatar/freebuf-logo.jpg
+  desc: FreeBuf互联网安全新媒体平台

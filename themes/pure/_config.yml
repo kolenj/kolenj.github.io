@@ -195,7 +195,7 @@ profile:
   avatar: images/avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
   author: 愚人江
-  author_title: Web Developer & Designer
+  author_title: Automation Tester & DevOps/TestOps
   author_description: 个人简介。
   location: Shenzhen, China
   follow: https://github.com/cofess
