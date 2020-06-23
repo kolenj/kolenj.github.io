@@ -1,6 +1,6 @@
 ---
 title: jmeter的安装与介绍
-date: 2017-03-25 09:09:04
+date: 2017-04-16 09:09:04
 tags: 
 - jmeter
 
@@ -251,7 +251,7 @@ categories:
     
     ![](https://gitee.com/kolenj/BlogImages/raw/master/20200620002557.png)
     ![](https://gitee.com/kolenj/BlogImages/raw/master/20200620003715.png)
-    ()
+    
     
 **jmeter分布式**
 
@@ -265,6 +265,7 @@ categories:
     * 如果控制机也需要执行脚本，则同样要执行其jmeter-server.bat程序
     
 (PS:执行机同样需要放置jmeter脚本，路径与控制机保持一致；控制机和执行机应在同一网段)
+
 
 **jmeter命令行模式下的常用命令举例**
 
@@ -327,21 +328,23 @@ categories:
         * 后置处理程序( Post processors )在其作用范围内的每个sampler元件之 后执行。
         * 断言( Assertions )对其作用范围内的每一个sampler 元件执行后的结果执行校验。
         * 监听器( Listeners )收集其作用范围的每个sampler元件的信息并呈现。
-s       * 取样器( Sampler )元件不和其它元件相互作用,因此不存在作用域的问题
+        * 取样器( Sampler )元件不和其它元件相互作用,因此不存在作用域的问题。 
 
     * 元件的执行顺序：
         * 配置单元-> 前置处理器-> 定时器-> 取样器-> 后置处理器-> 断言-> 监听器
         (PS: 如果在同一作用域范围内有多个同一类型的元件， 则这些元件按照它们在测试计划中的上下顺序次执行)
     
-       
-####  九、jmeter性能测试
-
-
-**添加集合点**
+ **添加集合点**
 
 * 右击需要集合并发的请求，添加“定时器" -> "同步定时器(Synchronizing Timer)”，模拟的用户组数量不能大于“线程组”里的线程数，
 超时时间应大于Ramp-up时间，具体如下图
 
 ![](https://gitee.com/kolenj/BlogImages/raw/master/20200615014124.png)
+
+
+####  九、jmeter性能测试
+
+
+
 
 

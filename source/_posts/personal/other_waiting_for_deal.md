@@ -7,6 +7,9 @@ tags:
 categories:
 - others
 
+password: myblog
+abstract: Welcome to my blog, this is need enter password!.
+message: 请输入密码继续阅读...
 ---
 
 **Linux**

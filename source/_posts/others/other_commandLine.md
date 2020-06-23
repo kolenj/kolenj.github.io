@@ -1,6 +1,6 @@
 ---
-title: Linux常用命令
-date: 2019-03-25 09:09:04
+title: Linux常用命令总结
+date: 2018-07-25 09:09:04
 tags: 
 - Linux
 

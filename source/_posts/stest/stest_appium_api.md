@@ -1,6 +1,6 @@
 ---
 title: appium的常用api与测试用例Demo
-date: 2018-03-25 09:09:04
+date: 2018-04-21 09:09:04
 tags: 
 - appium
 
